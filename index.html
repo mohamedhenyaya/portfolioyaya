@@ -71,7 +71,7 @@
 
 
 <!-- Header Start -->
-<div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+<div class="container-fluid d-flex align-items-center py-5 hero-section" id="home" style="min-height: 100vh;">
     <div class="container">
         <div class="row align-items-center">
             <!-- Profile Image -->
@@ -99,6 +99,12 @@
             </div>
         </div>
     </div>
+    <!-- Wave transition to content -->
+    <div class="hero-wave">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,0 1440,35 L1440,70 L0,70 Z" fill="#ffffff"/>
+        </svg>
+    </div>
 </div>
 <!-- Header End -->
 
@@ -108,29 +114,116 @@
 <!-- About Start -->
 <div class="container-fluid py-5" id="about">
     <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
+        <div class="position-relative d-flex align-items-center justify-content-center mb-5">
             <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
             <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
         </div>
         <div class="row align-items-center">
-            <div class="col-lg-5 pb-4 pb-lg-0">
-                <img class="img-fluid rounded w-100" src="img/YayaMednProfile.png" alt="">
-            </div>
-            <div class="col-lg-7">
-                <h3 class="mb-4">Software Engineer | Fullstack Developer</h3>
-                <p>Passionate about building efficient, scalable, and user-friendly web applications. With strong expertise in front-end and back-end development, I specialize in delivering innovative digital solutions using modern frameworks and tools. Always eager to solve complex problems and collaborate on impactful projects. </p>
-                <div class="row mb-3">
-                    <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Yaya Mohamedhen</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">05 June 2001</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Master</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">2 Years</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+212 7 22 33 28 38</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">mohamedhen.yaya@gmail.com</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Aïn Houalla Road, Salé, Morocco</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
+
+            <!-- Profile image + stats -->
+            <div class="col-lg-4 text-center pb-5 pb-lg-0">
+                <div class="about-img-wrapper mx-auto">
+                    <img src="img/YayaMednProfile.png" alt="Yaya Mohamedhen" class="about-profile-img">
                 </div>
-                <a href="#contact" class="btn btn-outline-primary mr-4">Contact Me</a>
-                <a href="#about" class="btn btn-outline-primary">Learn More</a>
+                <div class="row about-stats mt-4 mx-0">
+                    <div class="col-4 text-center px-1">
+                        <h4 class="text-primary font-weight-bold mb-0">2+</h4>
+                        <small class="text-muted">Years Exp.</small>
+                    </div>
+                    <div class="col-4 text-center px-1 about-stats-sep">
+                        <h4 class="text-primary font-weight-bold mb-0">50+</h4>
+                        <small class="text-muted">Projects</small>
+                    </div>
+                    <div class="col-4 text-center px-1">
+                        <h4 class="text-primary font-weight-bold mb-0">M2</h4>
+                        <small class="text-muted">Degree</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="col-lg-8">
+                <p class="text-primary font-weight-bold mb-1" style="font-size:13px; letter-spacing:1px; text-transform:uppercase;">Software Engineer · Fullstack Developer</p>
+                <h3 class="font-weight-bold mb-3" style="color:#1a1a2e;">Yaya Mohamedhen</h3>
+                <p class="text-muted mb-4" style="line-height:1.8;">Passionate about building efficient, scalable, and user-friendly web applications. With strong expertise in front-end and back-end development, I specialize in delivering innovative digital solutions using modern frameworks and tools. Always eager to solve complex problems and collaborate on impactful projects.</p>
+
+                <div class="row mb-4">
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fa fa-user text-primary"></i>
+                            <div>
+                                <span class="about-info-label">Name</span>
+                                <span class="about-info-value">Yaya Mohamedhen</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fa fa-birthday-cake text-primary"></i>
+                            <div>
+                                <span class="about-info-label">Birthday</span>
+                                <span class="about-info-value">05 June 2001</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fa fa-graduation-cap text-primary"></i>
+                            <div>
+                                <span class="about-info-label">Degree</span>
+                                <span class="about-info-value">Master in CS – Offshoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fa fa-briefcase text-primary"></i>
+                            <div>
+                                <span class="about-info-label">Experience</span>
+                                <span class="about-info-value">2 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fab fa-whatsapp text-primary"></i>
+                            <div>
+                                <span class="about-info-label">WhatsApp</span>
+                                <span class="about-info-value">+222 20 12 27 24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fa fa-envelope text-primary"></i>
+                            <div>
+                                <span class="about-info-label">Email</span>
+                                <span class="about-info-value">mohamedhen.yaya@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fa fa-map-marker-alt text-primary"></i>
+                            <div>
+                                <span class="about-info-label">Location</span>
+                                <span class="about-info-value">Salé, Maroc</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="about-info-item">
+                            <i class="fa fa-check-circle text-primary"></i>
+                            <div>
+                                <span class="about-info-label">Freelance</span>
+                                <span class="about-info-value" style="color:#28a745; font-weight:700;">Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-primary mr-3">Contact Me</a>
+                <a href="img/YAYA Mohamedhen cv 2025 Stage pfe.pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-primary">Download CV</a>
             </div>
         </div>
     </div>
@@ -146,99 +239,370 @@
             <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
             <h1 class="position-absolute text-uppercase text-primary">Education & Experience</h1>
         </div>
+        <!-- ===== EXPERIENCE ===== -->
+        <h3 class="section-col-title mb-4"><i class="fa fa-briefcase mr-2"></i>My Experience</h3>
+        <div class="row mb-5">
+
+            <!-- Colonne gauche : postes les plus récents -->
+            <div class="col-lg-6">
+
+                <!-- WinService – WEVA (Current) -->
+                <div class="timeline-card timeline-card-featured mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-current">Professional</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Fév 2026 – Présent <span class="tl-now-dot"></span></span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Full Stack Developer – Civil Registry System (WEVA)</h5>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>WinService · Nouakchott, Mauritanie</p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2"><em>Client : État civil – Plateforme nationale d'enrollment biométrique</em></p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>Application desktop JavaFX 17 (MVC, FXML) – workflow d'enrollment en 8 étapes : identité, généalogie, biométrie, scan, édition</li>
+                            <li>Intégration SDK Idemia MorphoKit (10 empreintes SLAP) + Topaz SigPlus (signature numérique) via couche d'interopérabilité Windows</li>
+                            <li>Validation photo ICAO en temps réel via OpenCV 4.7 – détection faciale & 16 critères qualité avant soumission</li>
+                            <li>APIs sécurisées Spring Boot 3 + JWT + PostgreSQL – gestion citoyens, rôles, données biométriques et références géographiques</li>
+                            <li>Architecture offline-first avec persistance locale, retry automatique et refresh token pour les zones à faible connectivité</li>
+                            <li>Génération PDF bilingue FR/AR, scan documentaire (NAPS2), QR code et synchronisation sécurisée desktop ↔ backend</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java 17</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">Spring Boot 3</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Swagger</span>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#portfolio" class="btn btn-sm btn-primary" id="weva-gallery-btn">
+                                <i class="fa fa-images mr-1"></i> Voir les captures du projet (12)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footbooking -->
+                <div class="timeline-card mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-freelance">Freelance</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Oct 2025 – Jan 2026</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Full Stack Developer – Footbooking</h5>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>Nouakchott, Mauritanie</p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2">Application web & mobile de réservation de terrains de football avec paiement en ligne, développée de zéro.</p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>Stack complète : Spring Boot (backend) · Angular (web) · React Native (mobile) · PostgreSQL</li>
+                            <li>Gestion utilisateurs, disponibilité temps réel, calendriers de réservation et authentification JWT sécurisée</li>
+                            <li>Intégration paiements en ligne Bankily & Moov Money – réduction des no-shows et optimisation des revenus</li>
+                            <li>Exploration de recommandations basées sur l'IA pour optimiser les créneaux et suggérer des réservations intelligentes</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIA-Dodge -->
+                <div class="timeline-card mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-academic">Academic Project</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Nov – Déc 2024</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Industrial Production Data Management</h5>
+                        <p class="tl-company mb-0">
+                            <i class="fa fa-map-marker-alt mr-1"></i>Mohammed V University &nbsp;·&nbsp;
+                            <a href="https://sia-dodge-prod.vercel.app/" target="_blank" class="text-primary font-weight-bold">SIA-Dodge ↗</a>
+                        </p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2">Web app simulant la gestion de données de production industrielle avec dashboards analytiques.</p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>Interface React pour la saisie, le suivi et la visualisation des indicateurs de production</li>
+                            <li>API Node.js & scripts Python pour l'ingestion, la transformation et le stockage des données dans PostgreSQL</li>
+                            <li>Dashboards Power BI embarqués pour la visualisation temps réel des KPIs industriels</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Microservices -->
+                <div class="timeline-card mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-academic">Academic Project</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Déc 2023 – Fév 2024</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Full Stack Microservices Application</h5>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>Mohammed V University of Rabat</p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2">Application distribuée en microservices avec SSO et déploiement conteneurisé.</p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>Architecture microservices Spring Boot 3 avec Spring Cloud Gateway et communication inter-services</li>
+                            <li>SSO avec OAuth 2.0 / KeyCloak – gestion centralisée des identités et des rôles</li>
+                            <li>Front-end Angular 17 avec NgRx pour la gestion d'état et un routing modulaire</li>
+                            <li>Déploiement conteneurisé Docker + PostgreSQL via Docker Compose</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Boot 3</span>
+                            <span class="tech-tag">OAuth 2.0</span>
+                            <span class="tech-tag">KeyCloak</span>
+                            <span class="tech-tag">Angular 17</span>
+                            <span class="tech-tag">NgRx</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Colonne droite -->
+            <div class="col-lg-6">
+
+                <!-- WinService – Enregistrement des Naissances -->
+                <div class="timeline-card timeline-card-featured mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-current">Professional</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Fév 2026 – Présent <span class="tl-now-dot"></span></span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Full Stack Developer – Birth Registration System</h5>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>WinService · Nouakchott, Mauritanie</p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2"><em>Client : État civil – Application web de numérisation et centralisation de l'enregistrement des naissances en Mauritanie (hôpitaux et centres de santé)</em></p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>Frontend Angular 18 avec gestion des rôles (AGENT_SANTE, SUPERVISEUR, ADMINISTRATEUR, AUDITEUR) – authentification JWT, intercepteur HTTP global et AuthGuard / RoleGuard sur chaque route</li>
+                            <li>Tableau de bord interactif : statistiques temps réel (naissances enregistrées, en attente, mortinaissances) et graphiques d'évolution via Chart.js 4 et ng2-charts</li>
+                            <li>Gestion des dossiers de naissance : liste paginée, filtres avancés, attribution de prénoms bilingues (FR/AR), validation des données maternelles et impression de certificats PDF</li>
+                            <li>Reporting avancé avec filtrage géographique multicouche (Wilaya, Moughataa, Commune) et journaux d'audit complets (accès AUDITEUR : historique par utilisateur, IP, terminal)</li>
+                            <li>Architecture orientée services, configuration API dynamique via <code>parametres.json</code> (APP_INITIALIZER), gestion des établissements de santé et export des données en Excel (XLSX)</li>
+                            <li>Interface bilingue français/arabe adaptée au contexte mauritanien, thème clair/sombre, tests Jasmine/Karma</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Angular 18</span>
+                            <span class="tech-tag">TypeScript 5.5</span>
+                            <span class="tech-tag">Bootstrap 5</span>
+                            <span class="tech-tag">Angular Material</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">JWT / RxJS</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">SCSS</span>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#portfolio" class="btn btn-sm btn-primary" id="birth-reg-gallery-btn">
+                                <i class="fa fa-images mr-1"></i> Voir les captures du projet (9)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WinService – DIRCMAT -->
+                <div class="timeline-card mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-pro">Consultant</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Nov 2025 – Fév 2026</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Full Stack Developer (Consultant) – DIRCMAT</h5>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>WinService · Nouakchott, Mauritanie</p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2"><em>Client : Ministère de la Défense – Système d'Information de Gestion des Matériels</em></p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>API RESTful Spring Boot, Spring Data JPA, Spring Security (JWT), PostgreSQL – gestion armes, véhicules, munitions, carburant et personnel</li>
+                            <li>Front-end Angular (TypeScript, HTML, CSS) entièrement intégré aux services backend</li>
+                            <li>Liaison technique principale avec le Ministère : recueil des besoins, présentations de l'avancement, conformité opérationnelle et sécuritaire</li>
+                            <li>Pipeline CI/CD via GitHub Actions, tests automatisés Postman, méthodologie Agile Scrum</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intelcia – Tenkai / SFR -->
+                <div class="timeline-card mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-pfe">PFE / Stage</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Avr – Oct 2025</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Full Stack Developer – SFR Fiber Study Portal</h5>
+                        <p class="tl-company mb-0">
+                            <i class="fa fa-map-marker-alt mr-1"></i>Intelcia IT Solutions – Tenkai · Casablanca
+                            &nbsp;·&nbsp;
+                            <a href="img/Attestation de Stage YAYA MOHAMEDHEN.pdf" target="_blank" class="btn-attestation" style="font-size:11px;">
+                                <i class="fa fa-file-pdf mr-1"></i>Attestation
+                            </a>
+                        </p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2"><em>Client : SFR France – Modernisation du portail étude fibre (remplacement d'un legacy PHP)</em></p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>API RESTful Java 17, Spring Boot, Spring MVC, Spring Data JPA, Spring Security (JWT), Oracle SQL – en remplacement du backend PHP legacy</li>
+                            <li>Front-end Angular 17 (TypeScript, HTML5, CSS3) – interface moderne et responsive</li>
+                            <li>CI/CD GitLab, Docker, tests automatisés JUnit, Mockito, Postman – architecture microservices, UML, Agile Scrum</li>
+                            <li><strong>+30% d'amélioration des performances</strong> applicatives – scalabilité et maintenabilité accrues</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java 17</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Oracle SQL</span>
+                            <span class="tech-tag">Angular 17</span>
+                            <span class="tech-tag">GitLab CI/CD</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ShopInsight -->
+                <div class="timeline-card timeline-card-featured mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-personal">Personal Project</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Fév – Avr 2024</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">ShopInsight – Smart E-Commerce Platform</h5>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>Full Stack Developer · Casablanca, Maroc</p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2">Plateforme e-commerce intelligente – gestion produits, commandes & clients avec statistiques et insights métier.</p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>Backend Java 17, Spring Boot, Spring Data JPA, Spring Security (JWT), REST APIs, MySQL</li>
+                            <li>Authentification sécurisée, gestion produits, suivi commandes et dashboards de statistiques de ventes</li>
+                            <li>Front-end Angular (TypeScript, HTML5, SCSS, PrimeNG) – interface moderne, responsive et fluide</li>
+                            <li>GitHub Actions, Docker, Agile Scrum – CI/CD, tests et développement itératif</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java 17</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">PrimeNG</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BNM -->
+                <div class="timeline-card mb-4">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-pro">Internship</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Mai – Août 2023</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Web Developer</h5>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>Banque Nationale de Mauritanie (BNM)</p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="small text-muted mb-2">Application web de gestion des demandes de crédit en ligne avec traitement automatisé.</p>
+                        <ul class="exp-bullets small mb-2">
+                            <li>Formulaire de soumission de demande de crédit en ligne avec validation et workflow de traitement automatisé</li>
+                            <li>Dashboard d'administration pour le suivi des demandes, mise à jour des statuts et gestion documentaire</li>
+                            <li>Contrôle d'accès basé sur les rôles (personnel bancaire / demandeurs) avec Django & MySQL</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== EDUCATION ===== -->
+        <h3 class="section-col-title mb-4"><i class="fa fa-graduation-cap mr-2"></i>My Education</h3>
         <div class="row">
-            <!-- My Education -->
-            <div class="col-lg-6 d-flex flex-column">
-                <h3 class="mb-4">My Education</h3>
-                <div class="border-left border-primary pt-2 pl-4">
-                    <div class="position-relative mb-4">
-                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                        <h5 class="font-weight-bold mb-1">Master In Computer Science | OFFSHORING</h5>
-                        <p class="mb-2"><strong>Mohammed V University of Rabat</strong> | <small>2023 - 2025</small></p>
-                        <p>Master's degree in Software Engineering (Informatique Appliquée, Offshoring) in progress. The first year was successfully completed with excellent grades. I am currently in my second year.</p>
+
+            <!-- Master -->
+            <div class="col-md-4 mb-4">
+                <div class="timeline-card h-100">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-primary">Master</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>2023 – 2025</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Master in Computer Science – Offshoring</h5>
+                        <p class="tl-subtitle mb-0">Informatique Appliquée</p>
                     </div>
-                    <div class="position-relative mb-4">
-                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                        <h5 class="font-weight-bold mb-1">Bachelor's degree in Mathematics & Computer Science</h5>
-                        <p class="mb-2"><strong>Nouakchott University</strong> | <small>2020 - 2023</small></p>
-                        <p>Bachelor's degree in Mathematics and Computer Science, awarded with High Honors and excellent results.</p>
-                    </div>
-                    <div class="position-relative mb-4">
-                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                        <h5 class="font-weight-bold mb-1">Baccalaureate</h5>
-                        <p class="mb-2"><strong>Elkhiyar-Nouakchott</strong> | <small>2000</small></p>
-                        <p>High School Diploma in Mathematics (Bac C), obtained with good grades, including 80% in Mathematics.</p>
+                    <div class="timeline-card-body">
+                        <p class="tl-institution"><i class="fa fa-university mr-2"></i><strong>Mohammed V University of Rabat</strong></p>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap" style="gap:8px;">
+                            <p class="mb-0 small text-muted">Diplômé avec <span class="badge badge-success" style="font-size:10px;">Mention 2025</span></p>
+                            <a href="img/Attestation de Réussite 2025 IAO.pdf" target="_blank" class="btn-attestation mt-1">
+                                <i class="fa fa-file-pdf mr-1"></i>Attestation
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- My Experience -->
-            <div class="col-lg-6 d-flex flex-column">
-                <h3 class="mb-4">My Experience</h3>
-                <div class="border-left border-primary pt-2 pl-4">
-                    <div class="position-relative mb-4">
-                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                        <h5 class="font-weight-bold mb-1">Website for Industrial Production Data Management</h5>
-                        <p class="mb-2 text-muted">
-                            <strong>Mohammed V University of Rabat</strong> | 
-                            <a href="https://sia-dodge-prod.vercel.app/" target="_blank" class="text-primary text-decoration-none">
-                                SIA-Dodge
-                            </a> <br>
-                            <small>Nov 2024 - Dec 2024</small>
-                        </p>
-                        <p>Development of a web application to simulate the management of industrial production data.</p>
-                        <ul>
-                            <li><strong>Frontend Technologies:</strong> JavaScript, React, Bootstrap.</li>
-                            <li><strong>Backend Technologies:</strong> Node.js/Express.js, Python.</li>
-                            <li><strong>Tools:</strong> Power BI, LaTeX, Excel, VS Code.</li>
-                            <li><strong>Database Management:</strong> Excel, PostgreSQL.</li>
-                        </ul>
+            <!-- Bachelor -->
+            <div class="col-md-4 mb-4">
+                <div class="timeline-card h-100">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-primary">Bachelor</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>2020 – 2023</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Mathematics & Computer Science</h5>
                     </div>
-                    
-                    <div class="position-relative mb-4">
-                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                        <h5 class="font-weight-bold mb-1">Development of Back-End Microservices</h5>
-                        <p class="mb-2 text-muted">
-                            <strong>Mohammed V University of Rabat</strong> | <small>Dec 2023 - Feb 2024</small>
-                        </p>
-                        <p>Development of a microservices architecture with advanced features such as security, API management, and service communication.</p>
-                        <ul>
-                            <li><strong>Back-end Technologies:</strong> Spring Boot 3, Spring JPA, Spring Cloud, Spring Security, Spring Cloud Gateway, Swagger API, Eureka, Kafka REST API, ZipKin, OpenFeign, Resilience4j, PostgreSQL.</li>
-                            <li><strong>DevOps Tools:</strong> Docker, Kubernetes, Git, GitHub.</li>
-                            <li><strong>Achievements:</strong> Implementation of a distributed architecture and deployment via Docker and Kubernetes.</li>
-                            <li><strong>Tools:</strong> IntelliJ IDEA</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="position-relative mb-4">
-                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                        <h5 class="font-weight-bold mb-1">Full Stack Microservices</h5>
-                        <p class="mb-2 text-muted">
-                            <strong>Mohammed V University of Rabat</strong> | <small>Dec 2023 - Feb 2024</small>
-                        </p>
-                        <ul>
-                            <li><strong>Back-end:</strong> Spring Boot 3, Spring JPA, Spring Security, OAuth 2.0, OpenID, KeyCloak, Swagger API, REST API, H2, PostgreSQL, Docker Compose.</li>
-                            <li><strong>Front-end:</strong> Angular 17, NgRx, RxJS, Angular Material.</li>
-                            <li><strong>Tools:</strong> IntelliJ IDEA</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="position-relative mb-4">
-                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                        <h5 class="font-weight-bold mb-1">Web Developer</h5>
-                        <p class="mb-2 text-muted">
-                            <strong>Banque Nationale de Mauritanie (BNM)</strong> | Mai 2023 - Août 2023
-                        </p>
-                        <p>Development of a web application for online loan request management, featuring a user-friendly interface and automated processing.</p>
-                        <ul>
-                            <li><strong>Frontend technologies:</strong> HTML, CSS, JavaScript, Bootstrap</li>
-                            <li><strong>Backend technologies:</strong> Python (Django)</li>
-                            <li><strong>Tools:</strong> VS Code</li>
-                            <li><strong>Database:</strong> MySQL</li>
-                        </ul>
+                    <div class="timeline-card-body">
+                        <p class="tl-institution"><i class="fa fa-university mr-2"></i><strong>Nouakchott University</strong></p>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap" style="gap:8px;">
+                            <p class="mb-0 small text-muted"><strong class="text-primary">High Honors</strong></p>
+                            <a href="img/Attestation de Diplôme2023.pdf" target="_blank" class="btn-attestation mt-1">
+                                <i class="fa fa-file-pdf mr-1"></i>Attestation
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Bac -->
+            <div class="col-md-4 mb-4">
+                <div class="timeline-card h-100">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-primary">Baccalaureate</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>2020</span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Bac C – Mathematics</h5>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="tl-institution"><i class="fa fa-school mr-2"></i><strong>Elkhiyar – Nouakchott</strong></p>
+                        <p class="mb-0 small text-muted">Diplôme avec <strong>90% en Mathématiques</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -250,140 +614,139 @@
 <!-- Skill Start -->
 <div class="container-fluid py-5" id="skill">
     <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
+        <div class="position-relative d-flex align-items-center justify-content-center mb-5">
             <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
             <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
         </div>
-        <div class="row align-items-center">
-            <!-- Left Column -->
-            <div class="col-md-6">
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">HTML</h6>
-                        <h6 class="font-weight-bold">95%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">CSS</h6>
-                        <h6 class="font-weight-bold">85%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">PHP</h6>
-                        <h6 class="font-weight-bold">90%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Python</h6>
-                        <h6 class="font-weight-bold">90%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Java</h6>
-                        <h6 class="font-weight-bold">85%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Power BI</h6>
-                        <h6 class="font-weight-bold">80%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">MySQL</h6>
-                        <h6 class="font-weight-bold">85%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="row">
+            <!-- Programming Languages -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #06A3DA; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3 text-primary"><i class="fa fa-code mr-2"></i>Programming Languages</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Java</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Python</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">PHP</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">TypeScript</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">JavaScript</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">HTML / CSS</span>
                     </div>
                 </div>
             </div>
-            <!-- Right Column -->
-            <div class="col-md-6">
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Javascript</h6>
-                        <h6 class="font-weight-bold">90%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Angular JS</h6>
-                        <h6 class="font-weight-bold">95%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">ReactJs</h6>
-                        <h6 class="font-weight-bold">80%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            <!-- Frameworks & Libraries -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3 text-success"><i class="fa fa-layer-group mr-2"></i>Frameworks &amp; Libraries</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Boot</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring MVC</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Data JPA</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Security</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Cloud</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Hibernate</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">RESTful APIs</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Microservices</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Swagger / OpenAPI</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Angular</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Angular Material</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">React</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Bootstrap</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">PrimeNG</span>
                     </div>
                 </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Docker</h6>
-                        <h6 class="font-weight-bold">75%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Kubernetes</h6>
-                        <h6 class="font-weight-bold">70%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- Database Systems -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #17a2b8; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3 text-info"><i class="fa fa-database mr-2"></i>Database Systems</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">PostgreSQL</span>
+                        <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Oracle</span>
+                        <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">MySQL</span>
+                        <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">SQL Server</span>
+                        <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">MongoDB</span>
+                        <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Firebase</span>
                     </div>
                 </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">UML</h6>
-                        <h6 class="font-weight-bold">85%</h6>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- DevOps / CI-CD -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #fd7e14; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3" style="color: #fd7e14;"><i class="fa fa-server mr-2"></i>DevOps / CI-CD</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Docker</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Kubernetes</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Docker Compose</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">GitLab CI/CD</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Jenkins</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">GitHub Actions</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">YAML</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Bash</span>
                     </div>
                 </div>
-                <div class="skill mb-4">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-bold">Jira</h6>
-                        <h6 class="font-weight-bold">80%</h6>
+            </div>
+            <!-- Testing & Quality -->
+            <div class="col-lg-4 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #dc3545; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3 text-danger"><i class="fa fa-check-circle mr-2"></i>Testing &amp; Quality</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">JUnit</span>
+                        <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Mockito</span>
+                        <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">REST Assured</span>
+                        <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Postman</span>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <!-- Security -->
+            <div class="col-lg-4 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #6f42c1; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3" style="color: #6f42c1;"><i class="fa fa-shield-alt mr-2"></i>Security</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #6f42c1; color: #fff;">Spring Security</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #6f42c1; color: #fff;">JWT</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #6f42c1; color: #fff;">OAuth2</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Methodologies & Tools -->
+            <div class="col-lg-4 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #6c757d; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3 text-secondary"><i class="fa fa-tools mr-2"></i>Methodologies &amp; Tools</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Git</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">GitHub</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">GitLab</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Maven</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Gradle</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">UML</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Agile Scrum</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Jira</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Languages -->
+            <div class="col-12 mb-4">
+                <div class="skill-category p-4" style="border-left: 4px solid #06A3DA; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3 text-primary"><i class="fa fa-globe mr-2"></i>Languages</h5>
+                    <div class="row">
+                        <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                            <div class="p-3" style="background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
+                                <h6 class="font-weight-bold mb-1">Arabic</h6>
+                                <span class="badge badge-primary px-3 py-2" style="font-size: 13px;">Native</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                            <div class="p-3" style="background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
+                                <h6 class="font-weight-bold mb-1">French</h6>
+                                <span class="badge badge-success px-3 py-2" style="font-size: 13px;">Fluent</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <div class="p-3" style="background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
+                                <h6 class="font-weight-bold mb-1">English</h6>
+                                <span class="badge badge-info px-3 py-2" style="font-size: 13px;">Technical</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -397,66 +760,78 @@
 
 
 <!-- Services Start -->
-<div class="container-fluid pt-5" id="service">
+<div class="container-fluid py-5" id="service">
     <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
+        <div class="position-relative d-flex align-items-center justify-content-center mb-5">
             <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
             <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
         </div>
-        <div class="row pb-3">
-            <!-- Software Engineer -->
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-cogs service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Software Engineering</h4>
+        <div class="row">
+            <!-- Software Engineering -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="svc-card h-100">
+                    <div class="svc-icon-wrap">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <h5 class="svc-title">Software Engineering</h5>
+                    <p class="svc-desc">Design and build efficient, scalable software solutions that tackle complex business challenges with clean, maintainable code.</p>
+                    <a href="#contact" class="svc-cta">Contact Me <i class="fa fa-arrow-right"></i></a>
                 </div>
-                <p>Design and develop efficient and scalable software solutions to address complex business challenges.</p>
-                <a class="btn btn-primary" href="#contact">Order Now</a>
             </div>
             <!-- Full-Stack Development -->
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-code service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Full-Stack Development</h4>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="svc-card h-100">
+                    <div class="svc-icon-wrap">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <h5 class="svc-title">Full-Stack Development</h5>
+                    <p class="svc-desc">Build robust web applications integrating modern front-end frameworks (Angular, React) with solid back-end APIs (Spring Boot).</p>
+                    <a href="#contact" class="svc-cta">Contact Me <i class="fa fa-arrow-right"></i></a>
                 </div>
-                <p>Build robust web applications integrating modern front-end and back-end technologies for seamless functionality.</p>
-                <a class="btn btn-primary" href="#contact">Order Now</a>
             </div>
-            <!-- Machine Learning & Data Analysis -->
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-brain service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Machine Learning & Data Analysis</h4>
+            <!-- Machine Learning & Data -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="svc-card h-100">
+                    <div class="svc-icon-wrap">
+                        <i class="fa fa-brain"></i>
+                    </div>
+                    <h5 class="svc-title">Machine Learning & Data</h5>
+                    <p class="svc-desc">Develop intelligent systems and analyze large datasets to extract actionable insights and build accurate predictive models.</p>
+                    <a href="#contact" class="svc-cta">Contact Me <i class="fa fa-arrow-right"></i></a>
                 </div>
-                <p>Develop intelligent systems and analyze large datasets to extract insights and build predictive models.</p>
-                <a class="btn btn-primary" href="#contact">Order Now</a>
             </div>
             <!-- Backend Optimization -->
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-database service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Backend Optimization</h4>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="svc-card h-100">
+                    <div class="svc-icon-wrap">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <h5 class="svc-title">Backend Optimization</h5>
+                    <p class="svc-desc">Optimize server-side operations, improve database performance, and implement secure, high-throughput REST APIs.</p>
+                    <a href="#contact" class="svc-cta">Contact Me <i class="fa fa-arrow-right"></i></a>
                 </div>
-                <p>Optimize server-side operations, improve database performance, and implement secure APIs for robust systems.</p>
-                <a class="btn btn-primary" href="#contact">Order Now</a>
             </div>
-            <!-- DevOps -->
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-server service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">DevOps Practices</h4>
+            <!-- DevOps Practices -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="svc-card h-100">
+                    <div class="svc-icon-wrap">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <h5 class="svc-title">DevOps Practices</h5>
+                    <p class="svc-desc">Set up CI/CD pipelines, containerization with Docker & Kubernetes, and automate deployments for reliable, fast delivery.</p>
+                    <a href="#contact" class="svc-cta">Contact Me <i class="fa fa-arrow-right"></i></a>
                 </div>
-                <p>Optimize development workflows and implement CI/CD pipelines to improve deployment efficiency and reliability.</p>
-                <a class="btn btn-primary" href="#contact">Order Now</a>
             </div>
-            <!-- Code Review and Maintenance -->
-            <div class="col-lg-4 col-md-6 text-center mb-5">
-                <div class="d-flex align-items-center justify-content-center mb-4">
-                    <i class="fa fa-2x fa-check-circle service-icon bg-primary text-white mr-3"></i>
-                    <h4 class="font-weight-bold m-0">Code Review & Maintenance</h4>
+            <!-- Code Review & Maintenance -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="svc-card h-100">
+                    <div class="svc-icon-wrap">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                    <h5 class="svc-title">Code Review & Maintenance</h5>
+                    <p class="svc-desc">Ensure long-term code quality through thorough reviews, refactoring, test coverage, and continuous performance monitoring.</p>
+                    <a href="#contact" class="svc-cta">Contact Me <i class="fa fa-arrow-right"></i></a>
                 </div>
-                <p>Ensure code quality and maintainability through rigorous review processes and continuous improvement.</p>
-                <a class="btn btn-primary" href="#contact">Order Now</a>
             </div>
         </div>
     </div>
@@ -482,57 +857,135 @@
                 </div>
             </div>
             <div class="row portfolio-container">
+
+                <!-- ── WEB ── -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/Dodge.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/Dodge.png" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+                    <div class="portfolio-text-card">
+                        <div class="portfolio-text-icon"><i class="fa fa-industry"></i></div>
+                        <h6 class="portfolio-text-name">SIA-Dodge</h6>
+                        <p class="portfolio-text-hint">Appuyer pour voir les captures d'écran du projet</p>
+                        <span class="portfolio-text-count">1 image</span>
+                        <a href="img/Dodge.png" data-lightbox="sia-dodge" data-title="SIA-Dodge" class="portfolio-text-trigger"></a>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/Portfolio.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/Portfolio.png" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                        <div class="portfolio-text-icon"><i class="fa fa-shield-alt"></i></div>
+                        <h6 class="portfolio-text-name">DIRCMAT</h6>
+                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
+                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                        <div class="portfolio-text-icon"><i class="fa fa-wifi"></i></div>
+                        <h6 class="portfolio-text-name">SFR Fiber Portal</h6>
+                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
+                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                        <div class="portfolio-text-icon"><i class="fa fa-cubes"></i></div>
+                        <h6 class="portfolio-text-name">Microservices App</h6>
+                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
+                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                        <div class="portfolio-text-icon"><i class="fa fa-shopping-cart"></i></div>
+                        <h6 class="portfolio-text-name">ShopInsight</h6>
+                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
+                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                        <div class="portfolio-text-icon"><i class="fa fa-university"></i></div>
+                        <h6 class="portfolio-text-name">BNM – Crédit</h6>
+                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
+                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="portfolio-text-card">
+                        <div class="portfolio-text-icon"><i class="fa fa-baby"></i></div>
+                        <h6 class="portfolio-text-name">Birth Registration System</h6>
+                        <p class="portfolio-text-hint">Appuyer pour voir les captures d'écran du projet</p>
+                        <span class="portfolio-text-count">9 images</span>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150523.png" data-lightbox="birth-reg" data-title="Birth Registration System (1/9)" class="portfolio-text-trigger"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150543.png" data-lightbox="birth-reg" data-title="Birth Registration System (2/9)" class="d-none"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150553.png" data-lightbox="birth-reg" data-title="Birth Registration System (3/9)" class="d-none"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150606.png" data-lightbox="birth-reg" data-title="Birth Registration System (4/9)" class="d-none"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150639.png" data-lightbox="birth-reg" data-title="Birth Registration System (5/9)" class="d-none"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150647.png" data-lightbox="birth-reg" data-title="Birth Registration System (6/9)" class="d-none"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150720.png" data-lightbox="birth-reg" data-title="Birth Registration System (7/9)" class="d-none"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150733.png" data-lightbox="birth-reg" data-title="Birth Registration System (8/9)" class="d-none"></a>
+                        <a href="img/Birth Registration System/Capture d'écran 2026-06-15 150812.png" data-lightbox="birth-reg" data-title="Birth Registration System (9/9)" class="d-none"></a>
+                    </div>
+                </div>
+
+                <!-- ── MOBILE ── -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/IoT Mobile1.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/IoT Mobile1.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                        <div class="portfolio-text-icon"><i class="fa fa-qrcode"></i></div>
+                        <h6 class="portfolio-text-name">Servily</h6>
+                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
+                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/IoT Mobile2.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/IoT Mobile2.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                        <div class="portfolio-text-icon"><i class="fa fa-futbol"></i></div>
+                        <h6 class="portfolio-text-name">Footbooking</h6>
+                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
+                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
                     </div>
                 </div>
+
+                <!-- ── DESKTOP ── -->
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/IoT project Santé health vitals.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/IoT project Santé health vitals.png" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+                    <div class="portfolio-text-card">
+                        <div class="portfolio-text-icon"><i class="fa fa-heartbeat"></i></div>
+                        <h6 class="portfolio-text-name">HealthCare</h6>
+                        <p class="portfolio-text-hint">Appuyer pour voir les captures d'écran du projet</p>
+                        <span class="portfolio-text-count">4 images</span>
+                        <a href="img/IoT project Santé health vitals.png" data-lightbox="healthcare" data-title="HealthCare (1/4)" class="portfolio-text-trigger"></a>
+                        <a href="img/IoT project Santé health vitals1.png" data-lightbox="healthcare" data-title="HealthCare (2/4)" class="d-none"></a>
+                        <a href="img/IoT Mobile1.jpg" data-lightbox="healthcare" data-title="HealthCare (3/4)" class="d-none"></a>
+                        <a href="img/IoT Mobile2.jpg" data-lightbox="healthcare" data-title="HealthCare (4/4)" class="d-none"></a>
                     </div>
                 </div>
-                
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="portfolio-text-card">
+                        <div class="portfolio-text-icon"><i class="fa fa-id-card"></i></div>
+                        <h6 class="portfolio-text-name">WEVA – Civil Registry</h6>
+                        <p class="portfolio-text-hint">Appuyer pour voir les captures d'écran du projet</p>
+                        <span class="portfolio-text-count">12 images</span>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124055.png" data-lightbox="weva" data-title="WEVA (1/12)" class="portfolio-text-trigger"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124235.png" data-lightbox="weva" data-title="WEVA (2/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124249.png" data-lightbox="weva" data-title="WEVA (3/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124448.png" data-lightbox="weva" data-title="WEVA (4/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124457.png" data-lightbox="weva" data-title="WEVA (5/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124605.png" data-lightbox="weva" data-title="WEVA (6/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124746.png" data-lightbox="weva" data-title="WEVA (7/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124859.png" data-lightbox="weva" data-title="WEVA (8/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 124943.png" data-lightbox="weva" data-title="WEVA (9/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 125035.png" data-lightbox="weva" data-title="WEVA (10/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 125112.png" data-lightbox="weva" data-title="WEVA (11/12)" class="d-none"></a>
+                        <a href="img/MEVA/Capture d'écran 2026-06-15 125136.png" data-lightbox="weva" data-title="WEVA (12/12)" class="d-none"></a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -557,7 +1010,7 @@
             <div class="col-lg-8">
                 <div class="contact-form text-center">
                     <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" action="send_email.php" method="POST" novalidate="novalidate">
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="form-row">
                             <div class="control-group col-sm-6">
                                 <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name"
@@ -621,12 +1074,59 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('weva-gallery-btn').addEventListener('click', function () {
+            setTimeout(function () {
+                var desktopFilter = document.querySelector('#portfolio-flters li[data-filter=".third"]');
+                if (desktopFilter) desktopFilter.click();
+            }, 600);
+        });
+
+        document.getElementById('birth-reg-gallery-btn').addEventListener('click', function () {
+            setTimeout(function () {
+                var webFilter = document.querySelector('#portfolio-flters li[data-filter=".first"]');
+                if (webFilter) webFilter.click();
+            }, 600);
+        });
+    </script>
+
+    <script>
+        (function () {
+            var sectionIds = ['about', 'qualification', 'skill', 'service', 'portfolio', 'contact'];
+            var targets = sectionIds.map(function (id) {
+                var sec = document.getElementById(id);
+                return sec ? sec.querySelector(':scope > .container') : null;
+            }).filter(Boolean);
+
+            targets.forEach(function (el) { el.classList.add('sr'); });
+
+            if (!window.IntersectionObserver) {
+                targets.forEach(function (el) { el.classList.add('visible'); });
+                return;
+            }
+
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+            targets.forEach(function (el) { io.observe(el); });
+        })();
+    </script>
 </body>
 
 </html>
