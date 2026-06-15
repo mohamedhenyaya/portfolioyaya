@@ -24,6 +24,70 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ── Mobile Bottom Navigation ── */
+        @media (max-width: 991.98px) {
+            .navbar { display: none !important; }
+            body    { padding-bottom: 68px; }
+        }
+
+        .mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            height: 62px;
+            background: #ffffff;
+            box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+            z-index: 9999;
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        @media (max-width: 991.98px) {
+            .mobile-bottom-nav { display: flex; }
+        }
+
+        .mob-nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            color: #adb5bd;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: color .2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mob-nav-item i {
+            font-size: 19px;
+            line-height: 1;
+            transition: transform .2s;
+        }
+
+        .mob-nav-item.active,
+        .mob-nav-item:hover {
+            color: #06A3DA;
+        }
+
+        .mob-nav-item.active i {
+            transform: translateY(-2px);
+        }
+
+        /* indicator dot on active tab */
+        .mob-nav-item.active::after {
+            content: '';
+            display: block;
+            width: 4px; height: 4px;
+            border-radius: 50%;
+            background: #06A3DA;
+            margin-top: 1px;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -629,7 +693,10 @@
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">PHP</span>
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">TypeScript</span>
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">JavaScript</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">jQuery</span>
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">HTML / CSS</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">JSON</span>
+                        <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">JSP / Servlet</span>
                     </div>
                 </div>
             </div>
@@ -640,6 +707,7 @@
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Boot</span>
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring MVC</span>
+                        <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">J2EE / Jakarta EE</span>
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Data JPA</span>
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Security</span>
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Cloud</span>
@@ -665,6 +733,7 @@
                         <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">MySQL</span>
                         <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">SQL Server</span>
                         <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">MongoDB</span>
+                        <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">PL/SQL</span>
                         <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Firebase</span>
                     </div>
                 </div>
@@ -694,6 +763,7 @@
                         <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Mockito</span>
                         <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">REST Assured</span>
                         <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Postman</span>
+                        <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">SoapUI</span>
                     </div>
                 </div>
             </div>
@@ -721,6 +791,34 @@
                         <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">UML</span>
                         <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Agile Scrum</span>
                         <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Jira</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Eclipse</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">NetBeans</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">SQL Developer</span>
+                        <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Toad</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Operating Systems -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #20c997; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3" style="color: #20c997;"><i class="fa fa-desktop mr-2"></i>Operating Systems</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #20c997; color: #fff;">Unix / Linux</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #20c997; color: #fff;">Windows</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #20c997; color: #fff;">Mac OS</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Protocols -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #e83e8c; background: #f8f9fa; border-radius: 6px;">
+                    <h5 class="font-weight-bold mb-3" style="color: #e83e8c;"><i class="fa fa-network-wired mr-2"></i>Protocols</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">REST</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">SOAP</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">SSH</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">FTP</span>
+                        <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">TCP/IP</span>
                     </div>
                 </div>
             </div>
@@ -1064,6 +1162,30 @@
     <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="#home"      class="mob-nav-item active" data-section="home">
+            <i class="fa fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#about"     class="mob-nav-item" data-section="about">
+            <i class="fa fa-user"></i>
+            <span>About</span>
+        </a>
+        <a href="#skill"     class="mob-nav-item" data-section="skill">
+            <i class="fa fa-code"></i>
+            <span>Skills</span>
+        </a>
+        <a href="#portfolio" class="mob-nav-item" data-section="portfolio">
+            <i class="fa fa-images"></i>
+            <span>Gallery</span>
+        </a>
+        <a href="#contact"   class="mob-nav-item" data-section="contact">
+            <i class="fa fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -1083,6 +1205,36 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        (function () {
+            var sections = ['home', 'about', 'qualification', 'skill', 'service', 'portfolio', 'contact'];
+            var tabMap   = { home: 'home', about: 'about', qualification: 'about', skill: 'skill', service: 'skill', portfolio: 'portfolio', contact: 'contact' };
+            var items    = document.querySelectorAll('.mob-nav-item');
+
+            function setActive(sectionKey) {
+                var tab = tabMap[sectionKey] || sectionKey;
+                items.forEach(function (el) {
+                    el.classList.toggle('active', el.dataset.section === tab);
+                });
+            }
+
+            function onScroll() {
+                var scrollY  = window.scrollY || window.pageYOffset;
+                var current  = sections[0];
+                sections.forEach(function (id) {
+                    var el = document.getElementById(id);
+                    if (el && el.getBoundingClientRect().top + window.scrollY - 120 <= scrollY) {
+                        current = id;
+                    }
+                });
+                setActive(current);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
 
     <script>
         document.getElementById('weva-gallery-btn').addEventListener('click', function () {
