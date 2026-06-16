@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <title>Yaya Mohamedhen</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Yaya Mohamedhen, Full Stack Developer, Software Engineer, Java, Spring Boot, Angular, React, Portfolio" name="keywords">
+    <meta content="Portfolio de Yaya Mohamedhen – Ingénieur Logiciel & Full Stack Developer spécialisé Java, Spring Boot, Angular, React." name="description">
+    <meta property="og:title" content="Yaya Mohamedhen – Full Stack Developer">
+    <meta property="og:description" content="Portfolio de Yaya Mohamedhen – Ingénieur Logiciel & Full Stack Developer.">
+    <meta property="og:type" content="website">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -26,6 +29,20 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+        html { scroll-behavior: smooth; }
+
+        /* ── Scroll progress bar ── */
+        #scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #06A3DA, #1565C0);
+            z-index: 99999;
+            transition: width 0.08s linear;
+            pointer-events: none;
+        }
+
         /* ── Mobile Bottom Navigation ── */
         @media (max-width: 991.98px) {
             .navbar { display: none !important; }
@@ -87,10 +104,108 @@
             background: #06A3DA;
             margin-top: 1px;
         }
+
+        /* ── Footer ── */
+        .footer-social-btn {
+            width: 38px; height: 38px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            font-size: 15px;
+            transition: background .2s, transform .2s;
+            text-decoration: none;
+        }
+        .footer-social-btn:hover {
+            background: rgba(255,255,255,0.35);
+            transform: translateY(-3px);
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-nav-link {
+            color: rgba(255,255,255,.75);
+            font-size: .88rem;
+            text-decoration: none;
+            transition: color .2s;
+        }
+        .footer-nav-link:hover { color: #fff; text-decoration: none; }
+
+        /* ── My Services – icônes distinctes par carte ── */
+        #service .col-lg-4:nth-child(1) .svc-icon-wrap { background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); }
+        #service .col-lg-4:nth-child(2) .svc-icon-wrap { background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%); }
+        #service .col-lg-4:nth-child(3) .svc-icon-wrap { background: linear-gradient(135deg, #d97706 0%, #fbbf24 100%); }
+        #service .col-lg-4:nth-child(4) .svc-icon-wrap { background: linear-gradient(135deg, #059669 0%, #34d399 100%); }
+        #service .col-lg-4:nth-child(5) .svc-icon-wrap { background: linear-gradient(135deg, #e11d48 0%, #fb7185 100%); }
+        #service .col-lg-4:nth-child(6) .svc-icon-wrap { background: linear-gradient(135deg, #3730a3 0%, #818cf8 100%); }
+
+        /* ── Lightbox – boutons de navigation en dehors de l'image ── */
+        .lb-outerContainer { overflow: visible !important; }
+
+        .lb-nav {
+            left: -68px !important;
+            width: calc(100% + 136px) !important;
+        }
+
+        .lb-nav a.lb-prev,
+        .lb-nav a.lb-next {
+            position: absolute !important;
+            float: none !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            width: 52px !important;
+            height: 52px !important;
+            background-color: rgba(255, 255, 255, 0.97) !important;
+            background-image: none !important;
+            border-radius: 50% !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+            opacity: 1 !important;
+            transition: background-color 0.2s, transform 0.2s !important;
+        }
+
+        .lb-nav a.lb-prev { left: 0 !important; }
+        .lb-nav a.lb-next { right: 0 !important; }
+
+        .lb-nav a.lb-prev::after,
+        .lb-nav a.lb-next::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            border-top: 3px solid #1a1a2e;
+            border-right: 3px solid #1a1a2e;
+            border-radius: 1px;
+        }
+
+        .lb-nav a.lb-prev::after {
+            transform: translate(-30%, -50%) rotate(-135deg);
+        }
+
+        .lb-nav a.lb-next::after {
+            transform: translate(-70%, -50%) rotate(45deg);
+        }
+
+        .lb-nav a.lb-prev:hover,
+        .lb-nav a.lb-next:hover {
+            background-color: #06A3DA !important;
+            transform: translateY(-50%) scale(1.08) !important;
+        }
+
+        .lb-nav a.lb-prev:hover::after,
+        .lb-nav a.lb-next:hover::after {
+            border-color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .lb-nav { left: -44px !important; width: calc(100% + 88px) !important; }
+            .lb-nav a.lb-prev, .lb-nav a.lb-next { width: 38px !important; height: 38px !important; }
+        }
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <div id="scroll-progress"></div>
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
@@ -104,12 +219,13 @@
                 <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#qualification" class="nav-item nav-link">Quality</a>
+                <a href="#certifications" class="nav-item nav-link">Certs</a>
                 <a href="#skill" class="nav-item nav-link">Skill</a>
                 <a href="#service" class="nav-item nav-link">Service</a>
                 <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -150,7 +266,7 @@
                 <div class="typed-text d-none">Software Engineer, Fullstack Developer</div>
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                     <!-- Button to Download CV -->
-                    <a href="img/YAYA Mohamedhen cv 2025 Stage pfe.pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-light mr-5">
+                    <a href="img/cvs/CV_Yaya_Mohamedhen (2).pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-light mr-5">
                         Download CV
                     </a>
                     <!-- Play Video Button -->
@@ -287,7 +403,7 @@
                 </div>
 
                 <a href="#contact" class="btn btn-primary mr-3">Contact Me</a>
-                <a href="img/YAYA Mohamedhen cv 2025 Stage pfe.pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-primary">Download CV</a>
+                <a href="img/cvs/CV_Yaya_Mohamedhen (2).pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-primary">Download CV</a>
             </div>
         </div>
     </div>
@@ -340,7 +456,7 @@
                             <span class="tech-tag">Swagger</span>
                         </div>
                         <div class="mt-3">
-                            <a href="#portfolio" class="btn btn-sm btn-primary" id="weva-gallery-btn">
+                            <a href="#portfolio" class="btn-attestation" id="weva-gallery-btn">
                                 <i class="fa fa-images mr-1"></i> Voir les captures du projet (12)
                             </a>
                         </div>
@@ -371,6 +487,11 @@
                             <span class="tech-tag">React Native</span>
                             <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">JWT</span>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#portfolio" class="btn-attestation" id="footbooking-gallery-btn">
+                                <i class="fa fa-images mr-1"></i> Voir les captures du projet (11)
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -413,11 +534,11 @@
                             <span class="tl-badge tl-badge-academic">Academic Project</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Déc 2023 – Fév 2024</span>
                         </div>
-                        <h5 class="tl-title mt-2 mb-0">Full Stack Microservices Application</h5>
+                        <h5 class="tl-title mt-2 mb-0">Full Stack Microservices Application </h5>
                         <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>Mohammed V University of Rabat</p>
                     </div>
                     <div class="timeline-card-body">
-                        <p class="small text-muted mb-2">Application distribuée en microservices avec SSO et déploiement conteneurisé.</p>
+                        <p class="small text-muted mb-2">Application distribuée en microservices avec déploiement conteneurisé.</p>
                         <ul class="exp-bullets small mb-2">
                             <li>Architecture microservices Spring Boot 3 avec Spring Cloud Gateway et communication inter-services</li>
                             <li>SSO avec OAuth 2.0 / KeyCloak – gestion centralisée des identités et des rôles</li>
@@ -472,7 +593,7 @@
                             <span class="tech-tag">SCSS</span>
                         </div>
                         <div class="mt-3">
-                            <a href="#portfolio" class="btn btn-sm btn-primary" id="birth-reg-gallery-btn">
+                            <a href="#portfolio" class="btn-attestation" id="birth-reg-gallery-btn">
                                 <i class="fa fa-images mr-1"></i> Voir les captures du projet (9)
                             </a>
                         </div>
@@ -538,6 +659,11 @@
                             <span class="tech-tag">Angular 17</span>
                             <span class="tech-tag">GitLab CI/CD</span>
                             <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#portfolio" class="btn-attestation" id="sfr-gallery-btn">
+                                <i class="fa fa-images mr-1"></i> Voir les captures du projet (7)
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -672,6 +798,83 @@
 </div>
 <!-- Qualification End -->
 
+
+
+<!-- Certifications Start -->
+<div class="container-fluid py-5" id="certifications" style="background: #f8f9fa;">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center mb-5">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Certs</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My Certifications</h1>
+        </div>
+        <div class="row justify-content-center">
+
+            <!-- Code Generation and Optimization Using IBM Granite -->
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="timeline-card h-100" style="border-top: 4px solid #0062ff;">
+                    <div class="timeline-card-header text-center">
+                        <div class="mb-3">
+                            <i class="fa fa-code" style="font-size: 38px; color: #0062ff;"></i>
+                        </div>
+                        <h5 class="tl-title mb-1">Code Generation and Optimization Using IBM Granite</h5>
+                        <p class="tl-company mb-1"><i class="fa fa-building mr-1"></i>IBM · <span class="small text-muted"><i class="far fa-calendar-alt mr-1"></i>Avril 2025</span></p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <ul class="exp-bullets small mb-3">
+                            <li>Utilisation du <strong>prompt engineering</strong> pour obtenir un meilleur code généré par l'IA</li>
+                            <li>Révision et <strong>optimisation</strong> de code généré automatiquement</li>
+                            <li>Familiarisation avec les <strong>assistants de programmation</strong> basés sur l'IA </li>
+                            <li>Compréhension du fonctionnement des <strong>LLMs</strong> pour la génération de code</li>
+                            <li>Bonnes pratiques pour garantir la qualité et la sécurité du code produit par l'IA</li>
+                        </ul>
+                        <div class="tech-tags mb-3">
+                            <span class="tech-tag">IBM Granite</span>
+                            <span class="tech-tag">Prompt Engineering</span>
+                            <span class="tech-tag">AI Coding</span>
+                            <span class="tech-tag">LLM</span>
+                        </div>
+                        <a href="img/certificats/IBMDesign20250425-25-cbpfwe.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fa fa-file-pdf mr-1"></i>Voir le certificat
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Classification and Summarization Using IBM Granite -->
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="timeline-card h-100" style="border-top: 4px solid #0062ff;">
+                    <div class="timeline-card-header text-center">
+                        <div class="mb-3">
+                            <i class="fa fa-database" style="font-size: 38px; color: #0062ff;"></i>
+                        </div>
+                        <h5 class="tl-title mb-1">Data Classification and Summarization Using IBM Granite</h5>
+                        <p class="tl-company mb-1"><i class="fa fa-building mr-1"></i>IBM · <span class="small text-muted"><i class="far fa-calendar-alt mr-1"></i>Avril 2025</span></p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <ul class="exp-bullets small mb-3">
+                            <li>Application des modèles <strong>IBM Granite</strong> pour la classification automatique de données</li>
+                            <li>Génération de <strong>résumés intelligents</strong> de documents et de grands ensembles de données</li>
+                            <li>Techniques de <strong>NLP</strong> pour l'analyse et le traitement de texte non structuré</li>
+                            <li>Prompt engineering orienté <strong>analyse de données</strong> et extraction d'informations clés</li>
+                            <li>Utilisation pratique des <strong>foundation models</strong> dans des workflows d'entreprise</li>
+                        </ul>
+                        <div class="tech-tags mb-3">
+                            <span class="tech-tag">IBM Granite</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Data Classification</span>
+                            <span class="tech-tag">AI Summarization</span>
+                        </div>
+                        <a href="img/certificats/IBMDesign20250425-27-wxwol2.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fa fa-file-pdf mr-1"></i>Voir le certificat
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Certifications End -->
 
 
 
@@ -977,29 +1180,18 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                    <div class="portfolio-text-card">
                         <div class="portfolio-text-icon"><i class="fa fa-wifi"></i></div>
                         <h6 class="portfolio-text-name">SFR Fiber Portal</h6>
-                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
-                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="portfolio-text-card portfolio-text-card--disabled">
-                        <div class="portfolio-text-icon"><i class="fa fa-cubes"></i></div>
-                        <h6 class="portfolio-text-name">Microservices App</h6>
-                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
-                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="portfolio-text-card portfolio-text-card--disabled">
-                        <div class="portfolio-text-icon"><i class="fa fa-shopping-cart"></i></div>
-                        <h6 class="portfolio-text-name">ShopInsight</h6>
-                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
-                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
+                        <p class="portfolio-text-hint">Appuyer pour voir les captures d'écran du projet</p>
+                        <span class="portfolio-text-count">7 images</span>
+                        <a href="img/etf/Capture d'écran 2026-06-16 122519.png" data-lightbox="sfr" data-title="SFR Fiber Portal (1/7)" class="portfolio-text-trigger"></a>
+                        <a href="img/etf/Capture d'écran 2026-06-16 122538.png" data-lightbox="sfr" data-title="SFR Fiber Portal (2/7)" class="d-none"></a>
+                        <a href="img/etf/Capture d'écran 2026-06-16 122603.png" data-lightbox="sfr" data-title="SFR Fiber Portal (3/7)" class="d-none"></a>
+                        <a href="img/etf/Capture d'écran 2026-06-16 122620.png" data-lightbox="sfr" data-title="SFR Fiber Portal (4/7)" class="d-none"></a>
+                        <a href="img/etf/Capture d'écran 2026-06-16 122641.png" data-lightbox="sfr" data-title="SFR Fiber Portal (5/7)" class="d-none"></a>
+                        <a href="img/etf/Capture d'écran 2026-06-16 122700.png" data-lightbox="sfr" data-title="SFR Fiber Portal (6/7)" class="d-none"></a>
+                        <a href="img/etf/Capture d'écran 2026-06-16 122716.png" data-lightbox="sfr" data-title="SFR Fiber Portal (7/7)" class="d-none"></a>
                     </div>
                 </div>
 
@@ -1041,11 +1233,22 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="portfolio-text-card portfolio-text-card--disabled">
+                    <div class="portfolio-text-card">
                         <div class="portfolio-text-icon"><i class="fa fa-futbol"></i></div>
                         <h6 class="portfolio-text-name">Footbooking</h6>
-                        <p class="portfolio-text-hint">Aucune capture disponible pour le moment</p>
-                        <span class="portfolio-text-count portfolio-text-count--soon">À venir</span>
+                        <p class="portfolio-text-hint">Appuyer pour voir les captures d'écran du projet</p>
+                        <span class="portfolio-text-count">11 images</span>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.26.jpeg"   data-lightbox="footbooking" data-title="Footbooking (1/11)"  class="portfolio-text-trigger"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.33.jpeg"   data-lightbox="footbooking" data-title="Footbooking (2/11)"  class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.33 (1).jpeg" data-lightbox="footbooking" data-title="Footbooking (3/11)" class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.33 (2).jpeg" data-lightbox="footbooking" data-title="Footbooking (4/11)" class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.34.jpeg"   data-lightbox="footbooking" data-title="Footbooking (5/11)"  class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.34 (1).jpeg" data-lightbox="footbooking" data-title="Footbooking (6/11)" class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.34 (2).jpeg" data-lightbox="footbooking" data-title="Footbooking (7/11)" class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.34 (3).jpeg" data-lightbox="footbooking" data-title="Footbooking (8/11)" class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.34 (4).jpeg" data-lightbox="footbooking" data-title="Footbooking (9/11)" class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.35.jpeg"   data-lightbox="footbooking" data-title="Footbooking (10/11)" class="d-none"></a>
+                        <a href="img/footbooking/WhatsApp Image 2026-06-16 at 13.29.35 (1).jpeg" data-lightbox="footbooking" data-title="Footbooking (11/11)" class="d-none"></a>
                     </div>
                 </div>
 
@@ -1147,10 +1350,66 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            
-            
-            
+        <div class="container py-4">
+            <div class="row mb-4">
+
+                <!-- Brand & bio -->
+                <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-left">
+                    <h3 class="font-weight-bold mb-2" style="color:#fff; letter-spacing:1px;">
+                        <span style="opacity:.7;">Yaya</span>Folio
+                    </h3>
+                    <p class="mb-3" style="color:rgba(255,255,255,.75); font-size:.9rem; line-height:1.7;">
+                        Ingénieur Logiciel &amp; Full Stack Developer passionné par la création de solutions numériques performantes et scalables.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start" style="gap:12px;">
+                        <a href="mailto:mohamedhen.yaya@gmail.com" class="footer-social-btn" title="Email">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/22220122724" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yaya-mohamedhen" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Medn" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="col-lg-4 mb-4 mb-lg-0 text-center">
+                    <h6 class="font-weight-bold text-uppercase mb-3" style="letter-spacing:1.5px; color:rgba(255,255,255,.6); font-size:.75rem;">Navigation</h6>
+                    <ul class="list-unstyled mb-0" style="line-height:2.2;">
+                        <li><a href="#home"           class="footer-nav-link">Home</a></li>
+                        <li><a href="#about"          class="footer-nav-link">About</a></li>
+                        <li><a href="#qualification"  class="footer-nav-link">Experience &amp; Education</a></li>
+                        <li><a href="#certifications" class="footer-nav-link">Certifications</a></li>
+                        <li><a href="#skill"          class="footer-nav-link">Skills</a></li>
+                        <li><a href="#portfolio"      class="footer-nav-link">Portfolio</a></li>
+                        <li><a href="#contact"        class="footer-nav-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact info -->
+                <div class="col-lg-4 text-center text-lg-right">
+                    <h6 class="font-weight-bold text-uppercase mb-3" style="letter-spacing:1.5px; color:rgba(255,255,255,.6); font-size:.75rem;">Contact</h6>
+                    <ul class="list-unstyled mb-3" style="color:rgba(255,255,255,.8); line-height:2.2; font-size:.9rem;">
+                        <li><i class="fa fa-map-marker-alt mr-2" style="color:rgba(255,255,255,.5);"></i>Salé, Maroc</li>
+                        <li><i class="fa fa-envelope mr-2" style="color:rgba(255,255,255,.5);"></i>mohamedhen.yaya@gmail.com</li>
+                        <li><i class="fab fa-whatsapp mr-2" style="color:rgba(255,255,255,.5);"></i>+222 20 12 27 24</li>
+                    </ul>
+                    <a href="img/cvs/CV_Yaya_Mohamedhen (2).pdf" download="Yaya_Mohamedhen_CV.pdf"
+                       class="btn btn-outline-light btn-sm px-4">
+                        <i class="fa fa-download mr-1"></i>Download CV
+                    </a>
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,.2); margin: 0 0 1.25rem;">
+            <p class="text-center mb-0" style="color:rgba(255,255,255,.5); font-size:.82rem;">
+                &copy; 2026 Yaya Mohamedhen &mdash; All rights reserved.
+            </p>
         </div>
     </div>
     <!-- Footer End -->
@@ -1208,8 +1467,8 @@
 
     <script>
         (function () {
-            var sections = ['home', 'about', 'qualification', 'skill', 'service', 'portfolio', 'contact'];
-            var tabMap   = { home: 'home', about: 'about', qualification: 'about', skill: 'skill', service: 'skill', portfolio: 'portfolio', contact: 'contact' };
+            var sections = ['home', 'about', 'qualification', 'certifications', 'skill', 'service', 'portfolio', 'contact'];
+            var tabMap   = { home: 'home', about: 'about', qualification: 'about', certifications: 'portfolio', skill: 'skill', service: 'skill', portfolio: 'portfolio', contact: 'contact' };
             var items    = document.querySelectorAll('.mob-nav-item');
 
             function setActive(sectionKey) {
@@ -1237,6 +1496,17 @@
     </script>
 
     <script>
+        /* Scroll progress bar */
+        (function () {
+            var bar = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', function () {
+                var pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                bar.style.width = Math.min(pct, 100) + '%';
+            }, { passive: true });
+        })();
+    </script>
+
+    <script>
         document.getElementById('weva-gallery-btn').addEventListener('click', function () {
             setTimeout(function () {
                 var desktopFilter = document.querySelector('#portfolio-flters li[data-filter=".third"]');
@@ -1250,11 +1520,25 @@
                 if (webFilter) webFilter.click();
             }, 600);
         });
+
+        document.getElementById('sfr-gallery-btn').addEventListener('click', function () {
+            setTimeout(function () {
+                var webFilter = document.querySelector('#portfolio-flters li[data-filter=".first"]');
+                if (webFilter) webFilter.click();
+            }, 600);
+        });
+
+        document.getElementById('footbooking-gallery-btn').addEventListener('click', function () {
+            setTimeout(function () {
+                var mobileFilter = document.querySelector('#portfolio-flters li[data-filter=".second"]');
+                if (mobileFilter) mobileFilter.click();
+            }, 600);
+        });
     </script>
 
     <script>
         (function () {
-            var sectionIds = ['about', 'qualification', 'skill', 'service', 'portfolio', 'contact'];
+            var sectionIds = ['about', 'qualification', 'certifications', 'skill', 'service', 'portfolio', 'contact'];
             var targets = sectionIds.map(function (id) {
                 var sec = document.getElementById(id);
                 return sec ? sec.querySelector(':scope > .container') : null;
