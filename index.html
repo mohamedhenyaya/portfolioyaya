@@ -15,8 +15,9 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -43,67 +44,46 @@
             pointer-events: none;
         }
 
-        /* ── Mobile Bottom Navigation ── */
+        /* ── Mobile Navigation ── */
         @media (max-width: 991.98px) {
             .navbar { display: none !important; }
-            body    { padding-bottom: 68px; }
         }
 
-        .mobile-bottom-nav {
+        /* Hamburger button — mobile only */
+        .nav-burger {
             display: none;
             position: fixed;
-            bottom: 0; left: 0; right: 0;
-            height: 62px;
-            background: #ffffff;
-            box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
-            z-index: 9999;
-            padding-bottom: env(safe-area-inset-bottom, 0px);
-        }
-
-        @media (max-width: 991.98px) {
-            .mobile-bottom-nav { display: flex; }
-        }
-
-        .mob-nav-item {
-            flex: 1;
-            display: flex;
+            top: 14px; right: 14px;
+            z-index: 9998;
+            width: 44px; height: 44px;
+            border: none;
+            background: rgba(255,255,255,0.96);
+            border-radius: 50%;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 3px;
-            color: #adb5bd;
-            text-decoration: none;
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            transition: color .2s;
+            align-items: center; justify-content: center;
+            gap: 5px;
+            cursor: pointer; padding: 0;
+            transition: box-shadow .2s ease, transform .2s ease;
             -webkit-tap-highlight-color: transparent;
         }
-
-        .mob-nav-item i {
-            font-size: 19px;
-            line-height: 1;
-            transition: transform .2s;
+        @media (max-width: 991.98px) {
+            .nav-burger { display: flex; }
         }
-
-        .mob-nav-item.active,
-        .mob-nav-item:hover {
-            color: #06A3DA;
+        .nav-burger:hover {
+            box-shadow: 0 4px 20px rgba(21,101,192,0.25);
+            transform: scale(1.05);
         }
-
-        .mob-nav-item.active i {
-            transform: translateY(-2px);
-        }
-
-        /* indicator dot on active tab */
-        .mob-nav-item.active::after {
-            content: '';
+        .nb {
             display: block;
-            width: 4px; height: 4px;
-            border-radius: 50%;
-            background: #06A3DA;
-            margin-top: 1px;
+            width: 20px; height: 2px;
+            background: #1565C0;
+            border-radius: 2px;
+            transition: transform .3s ease, opacity .3s ease;
         }
+        .nav-burger.is-open .nb:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-burger.is-open .nb:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .nav-burger.is-open .nb:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
         /* ── Footer ── */
         .footer-social-btn {
@@ -130,34 +110,36 @@
         }
         .footer-nav-link:hover { color: #fff; text-decoration: none; }
 
-        /* ── My Services – couleurs distinctes par carte ── */
-        #service .col-lg-4:nth-child(1) .svc-icon-wrap { background: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%); }
-        #service .col-lg-4:nth-child(2) .svc-icon-wrap { background: linear-gradient(135deg, #11998E 0%, #38EF7D 100%); }
-        #service .col-lg-4:nth-child(3) .svc-icon-wrap { background: linear-gradient(135deg, #FC5C7D 0%, #6A3093 100%); }
-        #service .col-lg-4:nth-child(4) .svc-icon-wrap { background: linear-gradient(135deg, #F7971E 0%, #FFD200 100%); }
-        #service .col-lg-4:nth-child(5) .svc-icon-wrap { background: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%); }
-        #service .col-lg-4:nth-child(6) .svc-icon-wrap { background: linear-gradient(135deg, #2F80ED 0%, #56CCF2 100%); }
+        /* ── Footer Navigation Grid ── */
+        .fnav {
+            display: flex;
+            flex-direction: column;
+        }
+        .fnav-row {
+            display: flex;
+            align-items: stretch;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: .45rem 0;
+        }
+        .fnav-row:last-child {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .fnav-item {
+            flex: 1;
+            padding: .15rem .5rem;
+            font-size: .88rem;
+            text-align: center;
+        }
+        .fnav-item + .fnav-item {
+            border-left: 1px solid rgba(255,255,255,0.12);
+        }
+        .fnav-full {
+            flex: unset;
+            width: 100%;
+            text-align: center;
+        }
 
-        #service .col-lg-4:nth-child(1) .svc-card { border-top-color: #4776E6; }
-        #service .col-lg-4:nth-child(2) .svc-card { border-top-color: #11998E; }
-        #service .col-lg-4:nth-child(3) .svc-card { border-top-color: #FC5C7D; }
-        #service .col-lg-4:nth-child(4) .svc-card { border-top-color: #F7971E; }
-        #service .col-lg-4:nth-child(5) .svc-card { border-top-color: #FF416C; }
-        #service .col-lg-4:nth-child(6) .svc-card { border-top-color: #2F80ED; }
-
-        #service .col-lg-4:nth-child(1) .svc-cta { color: #4776E6; }
-        #service .col-lg-4:nth-child(2) .svc-cta { color: #11998E; }
-        #service .col-lg-4:nth-child(3) .svc-cta { color: #FC5C7D; }
-        #service .col-lg-4:nth-child(4) .svc-cta { color: #F7971E; }
-        #service .col-lg-4:nth-child(5) .svc-cta { color: #FF416C; }
-        #service .col-lg-4:nth-child(6) .svc-cta { color: #2F80ED; }
-
-        #service .col-lg-4:nth-child(1) .svc-card:hover { box-shadow: 0 20px 52px rgba(71, 118, 230, 0.25); }
-        #service .col-lg-4:nth-child(2) .svc-card:hover { box-shadow: 0 20px 52px rgba(17, 153, 142, 0.25); }
-        #service .col-lg-4:nth-child(3) .svc-card:hover { box-shadow: 0 20px 52px rgba(252, 92, 125, 0.25); }
-        #service .col-lg-4:nth-child(4) .svc-card:hover { box-shadow: 0 20px 52px rgba(247, 151, 30, 0.25); }
-        #service .col-lg-4:nth-child(5) .svc-card:hover { box-shadow: 0 20px 52px rgba(255, 65, 108, 0.25); }
-        #service .col-lg-4:nth-child(6) .svc-card:hover { box-shadow: 0 20px 52px rgba(47, 128, 237, 0.25); }
+        /* ── My Services – svc2-card handles all color logic via data-color ── */
 
         /* ── Lightbox – boutons de navigation en dehors de l'image ── */
         .lb-outerContainer { overflow: visible !important; }
@@ -316,7 +298,7 @@
 <div class="container-fluid py-5" id="about">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">About</h1>
             <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
         </div>
         <div class="row align-items-center">
@@ -437,8 +419,8 @@
 <div class="container-fluid py-5" id="qualification">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-            <h1 class="position-absolute text-uppercase text-primary">Education & Experience</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Quality</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Education &amp; Experience</h1>
         </div>
         <!-- ===== EXPERIENCE ===== -->
         <h3 class="section-col-title mb-4"><i class="fa fa-briefcase mr-2"></i>My Experience</h3>
@@ -822,10 +804,10 @@
 
 
 <!-- Certifications Start -->
-<div class="container-fluid py-5" id="certifications" style="background: #f8f9fa;">
+<div class="container-fluid py-5" id="certifications">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Certs</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Certs</h1>
             <h1 class="position-absolute text-uppercase text-primary">My Certifications</h1>
         </div>
         <div class="row justify-content-center">
@@ -903,13 +885,13 @@
 <div class="container-fluid py-5" id="skill">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Skills</h1>
             <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
         </div>
         <div class="row">
             <!-- Programming Languages -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #06A3DA; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #06A3DA;">
                     <h5 class="font-weight-bold mb-3 text-primary"><i class="fa fa-code mr-2"></i>Programming Languages</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Java</span>
@@ -926,7 +908,7 @@
             </div>
             <!-- Frameworks & Libraries -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #28a745;">
                     <h5 class="font-weight-bold mb-3 text-success"><i class="fa fa-layer-group mr-2"></i>Frameworks &amp; Libraries</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Boot</span>
@@ -949,7 +931,7 @@
             </div>
             <!-- Database Systems -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #17a2b8; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #17a2b8;">
                     <h5 class="font-weight-bold mb-3 text-info"><i class="fa fa-database mr-2"></i>Database Systems</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">PostgreSQL</span>
@@ -964,7 +946,7 @@
             </div>
             <!-- DevOps / CI-CD -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #fd7e14; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #fd7e14;">
                     <h5 class="font-weight-bold mb-3" style="color: #fd7e14;"><i class="fa fa-server mr-2"></i>DevOps / CI-CD</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Docker</span>
@@ -980,7 +962,7 @@
             </div>
             <!-- Testing & Quality -->
             <div class="col-lg-4 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #dc3545; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #dc3545;">
                     <h5 class="font-weight-bold mb-3 text-danger"><i class="fa fa-check-circle mr-2"></i>Testing &amp; Quality</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">JUnit</span>
@@ -993,7 +975,7 @@
             </div>
             <!-- Security -->
             <div class="col-lg-4 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #6f42c1; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #6f42c1;">
                     <h5 class="font-weight-bold mb-3" style="color: #6f42c1;"><i class="fa fa-shield-alt mr-2"></i>Security</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #6f42c1; color: #fff;">Spring Security</span>
@@ -1004,7 +986,7 @@
             </div>
             <!-- Methodologies & Tools -->
             <div class="col-lg-4 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #6c757d; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #6c757d;">
                     <h5 class="font-weight-bold mb-3 text-secondary"><i class="fa fa-tools mr-2"></i>Methodologies &amp; Tools</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Git</span>
@@ -1024,7 +1006,7 @@
             </div>
             <!-- Operating Systems -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #20c997; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #20c997;">
                     <h5 class="font-weight-bold mb-3" style="color: #20c997;"><i class="fa fa-desktop mr-2"></i>Operating Systems</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #20c997; color: #fff;">Unix / Linux</span>
@@ -1035,7 +1017,7 @@
             </div>
             <!-- Protocols -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #e83e8c; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #e83e8c;">
                     <h5 class="font-weight-bold mb-3" style="color: #e83e8c;"><i class="fa fa-network-wired mr-2"></i>Protocols</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">REST</span>
@@ -1048,7 +1030,7 @@
             </div>
             <!-- Languages -->
             <div class="col-12 mb-4">
-                <div class="skill-category p-4" style="border-left: 4px solid #06A3DA; background: #f8f9fa; border-radius: 6px;">
+                <div class="skill-category p-4" style="border-left: 4px solid #06A3DA;">
                     <h5 class="font-weight-bold mb-3 text-primary"><i class="fa fa-globe mr-2"></i>Languages</h5>
                     <div class="row">
                         <div class="col-sm-4 text-center mb-3 mb-sm-0">
@@ -1085,76 +1067,89 @@
 <div class="container-fluid py-5" id="service">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Service</h1>
             <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
         </div>
         <div class="row">
-            <!-- Software Engineering -->
+
+            <!-- 01 · Software Engineering -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="svc-card h-100">
-                    <div class="svc-icon-wrap">
-                        <i class="fa fa-cogs"></i>
+                <div class="svc2-card" data-color="blue">
+                    <div class="svc2-header">
+                        <div class="svc2-icon"><i class="fa fa-cogs"></i></div>
+                        <span class="svc2-num">01</span>
                     </div>
-                    <h5 class="svc-title">Software Engineering</h5>
-                    <p class="svc-desc">Conception et développement de solutions logicielles robustes et maintenables — architecture système, modélisation UML et cycle complet du génie logiciel.</p>
-                    <a href="#contact" class="svc-cta">Me contacter <i class="fa fa-arrow-right"></i></a>
+                    <h5 class="svc2-title">Software Engineering</h5>
+                    <p class="svc2-desc">Conception et développement de solutions logicielles robustes et maintenables — architecture système, modélisation UML et cycle complet du génie logiciel.</p>
+                    <a href="#contact" class="svc2-cta">Me contacter <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
-            <!-- Développement Web -->
+
+            <!-- 02 · Développement Web -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="svc-card h-100">
-                    <div class="svc-icon-wrap">
-                        <i class="fa fa-globe"></i>
+                <div class="svc2-card" data-color="cyan">
+                    <div class="svc2-header">
+                        <div class="svc2-icon"><i class="fa fa-globe"></i></div>
+                        <span class="svc2-num">02</span>
                     </div>
-                    <h5 class="svc-title">Développement Web</h5>
-                    <p class="svc-desc">Développement fullstack d'applications web — APIs RESTful sécurisées (Spring Boot, JWT) en backend et interfaces modernes &amp; responsive (Angular, React) en frontend, de zéro à la production.</p>
-                    <a href="#contact" class="svc-cta">Me contacter <i class="fa fa-arrow-right"></i></a>
+                    <h5 class="svc2-title">Développement Web</h5>
+                    <p class="svc2-desc">Développement fullstack d'applications web — APIs RESTful sécurisées (Spring Boot, JWT) et interfaces modernes &amp; responsive (Angular, React), de zéro à la production.</p>
+                    <a href="#contact" class="svc2-cta">Me contacter <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
-            <!-- Développement Mobile -->
+
+            <!-- 03 · Développement Mobile -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="svc-card h-100">
-                    <div class="svc-icon-wrap">
-                        <i class="fa fa-mobile-alt"></i>
+                <div class="svc2-card" data-color="violet">
+                    <div class="svc2-header">
+                        <div class="svc2-icon"><i class="fa fa-mobile-alt"></i></div>
+                        <span class="svc2-num">03</span>
                     </div>
-                    <h5 class="svc-title">Développement Mobile</h5>
-                    <p class="svc-desc">Développement fullstack mobile cross-platform (React Native) — backend Spring Boot dédié, authentification JWT, synchronisation temps réel et déploiement iOS &amp; Android.</p>
-                    <a href="#contact" class="svc-cta">Me contacter <i class="fa fa-arrow-right"></i></a>
+                    <h5 class="svc2-title">Développement Mobile</h5>
+                    <p class="svc2-desc">Applications cross-platform (React Native) — backend Spring Boot dédié, authentification JWT, synchronisation temps réel et déploiement iOS &amp; Android.</p>
+                    <a href="#contact" class="svc2-cta">Me contacter <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
-            <!-- Développement Desktop -->
+
+            <!-- 04 · Développement Desktop -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="svc-card h-100">
-                    <div class="svc-icon-wrap">
-                        <i class="fa fa-desktop"></i>
+                <div class="svc2-card" data-color="teal">
+                    <div class="svc2-header">
+                        <div class="svc2-icon"><i class="fa fa-desktop"></i></div>
+                        <span class="svc2-num">04</span>
                     </div>
-                    <h5 class="svc-title">Développement Desktop</h5>
-                    <p class="svc-desc">Développement fullstack d'applications bureautiques — interface JavaFX riche avec intégration hardware (biométrie, signature), backend Spring Boot et synchronisation offline-first sécurisée.</p>
-                    <a href="#contact" class="svc-cta">Me contacter <i class="fa fa-arrow-right"></i></a>
+                    <h5 class="svc2-title">Développement Desktop</h5>
+                    <p class="svc2-desc">Applications bureautiques JavaFX avec intégration hardware (biométrie, signature), backend Spring Boot et synchronisation offline-first sécurisée.</p>
+                    <a href="#contact" class="svc2-cta">Me contacter <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
-            <!-- DevOps, Déploiement & Hébergement -->
+
+            <!-- 05 · DevOps & Hébergement -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="svc-card h-100">
-                    <div class="svc-icon-wrap">
-                        <i class="fa fa-server"></i>
+                <div class="svc2-card" data-color="amber">
+                    <div class="svc2-header">
+                        <div class="svc2-icon"><i class="fa fa-server"></i></div>
+                        <span class="svc2-num">05</span>
                     </div>
-                    <h5 class="svc-title">DevOps &amp; Hébergement</h5>
-                    <p class="svc-desc">Mise en place de pipelines CI/CD (GitHub Actions, GitLab), conteneurisation Docker &amp; Kubernetes, déploiement cloud et hébergement en production.</p>
-                    <a href="#contact" class="svc-cta">Me contacter <i class="fa fa-arrow-right"></i></a>
+                    <h5 class="svc2-title">DevOps &amp; Hébergement</h5>
+                    <p class="svc2-desc">Pipelines CI/CD (GitHub Actions, GitLab), conteneurisation Docker &amp; Kubernetes, déploiement cloud et hébergement en production.</p>
+                    <a href="#contact" class="svc2-cta">Me contacter <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
-            <!-- Étude de faisabilité -->
+
+            <!-- 06 · Étude de Faisabilité -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="svc-card h-100">
-                    <div class="svc-icon-wrap">
-                        <i class="fa fa-lightbulb"></i>
+                <div class="svc2-card" data-color="emerald">
+                    <div class="svc2-header">
+                        <div class="svc2-icon"><i class="fa fa-lightbulb"></i></div>
+                        <span class="svc2-num">06</span>
                     </div>
-                    <h5 class="svc-title">Étude de Faisabilité</h5>
-                    <p class="svc-desc">Analyse et validation technique de vos idées projets — étude de faisabilité, estimation des coûts, choix de stack technologique et roadmap de développement sur-mesure.</p>
-                    <a href="#contact" class="svc-cta">Me contacter <i class="fa fa-arrow-right"></i></a>
+                    <h5 class="svc2-title">Étude de Faisabilité</h5>
+                    <p class="svc2-desc">Analyse technique de vos idées — étude de faisabilité, estimation des coûts, choix de stack technologique et roadmap de développement sur-mesure.</p>
+                    <a href="#contact" class="svc2-cta">Me contacter <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -1164,8 +1159,8 @@
     <!-- Portfolio Start -->
     <div class="container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
+            <div class="position-relative d-flex align-items-center justify-content-center mb-4">
+                <h1 class="display-1 text-uppercase" aria-hidden="true">Gallery</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
             </div>
             <div class="row">
@@ -1324,41 +1319,44 @@
     <!-- Contact Start -->
 <div class="container-fluid py-5" id="contact">
     <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+        <div class="position-relative d-flex align-items-center justify-content-center mb-5">
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Contact</h1>
             <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="contact-form text-center">
+                <div class="contact-form">
+                    <h4 class="font-weight-bold mb-1" style="color: var(--ink-900, #0f172a); font-size: 1.3rem;">Send a Message</h4>
+                    <p class="mb-4" style="color: var(--ink-500, #64748b); font-size: 0.9rem;">I'll get back to you within 24 hours.</p>
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="form-row">
-                            <div class="control-group col-sm-6">
-                                <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name"
+                        <div class="form-row mb-3">
+                            <div class="control-group col-sm-6 mb-3 mb-sm-0">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
                                     required="required" data-validation-required-message="Please enter your name" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group col-sm-6">
-                                <input type="email" class="form-control p-4" id="email" name="email" placeholder="Your Email"
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
                                     required="required" data-validation-required-message="Please enter your email" />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control p-4" id="subject" name="subject" placeholder="Subject"
+                        <div class="control-group mb-3">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
                                 required="required" data-validation-required-message="Please enter a subject" />
                             <p class="help-block text-danger"></p>
                         </div>
-                        <div class="control-group">
-                            <textarea class="form-control py-3 px-4" rows="5" id="message" name="message" placeholder="Message"
+                        <div class="control-group mb-4">
+                            <textarea class="form-control" rows="5" id="message" name="message" placeholder="Your message..."
                                 required="required"
                                 data-validation-required-message="Please enter your message"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
-                        <div>
-                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
-                                Message</button>
+                        <div class="text-center">
+                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">
+                                <i class="fa fa-paper-plane mr-2"></i>Send Message
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -1399,17 +1397,29 @@
                 </div>
 
                 <!-- Quick links -->
-                <div class="col-lg-4 mb-4 mb-lg-0 text-center">
-                    <h6 class="font-weight-bold text-uppercase mb-3" style="letter-spacing:1.5px; color:rgba(255,255,255,.6); font-size:.75rem;">Navigation</h6>
-                    <ul class="list-unstyled mb-0" style="line-height:2.2;">
-                        <li><a href="#home"           class="footer-nav-link">Home</a></li>
-                        <li><a href="#about"          class="footer-nav-link">About</a></li>
-                        <li><a href="#qualification"  class="footer-nav-link">Experience &amp; Education</a></li>
-                        <li><a href="#certifications" class="footer-nav-link">Certifications</a></li>
-                        <li><a href="#skill"          class="footer-nav-link">Skills</a></li>
-                        <li><a href="#portfolio"      class="footer-nav-link">Portfolio</a></li>
-                        <li><a href="#contact"        class="footer-nav-link">Contact</a></li>
-                    </ul>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h6 class="font-weight-bold text-uppercase mb-3" style="letter-spacing:1.5px; color:rgba(255,255,255,.6); font-size:.75rem; text-align:center;">Navigation</h6>
+                    <div class="fnav">
+                        <!-- Ligne 1 : Home · About -->
+                        <div class="fnav-row">
+                            <a href="#home" class="footer-nav-link fnav-item">Home</a>
+                            <a href="#about" class="footer-nav-link fnav-item">About</a>
+                        </div>
+                        <!-- Ligne 2 : Education & Experience -->
+                        <div class="fnav-row">
+                            <a href="#qualification" class="footer-nav-link fnav-item fnav-full">Education &amp; Experience</a>
+                        </div>
+                        <!-- Ligne 3 : Certifications · Skills -->
+                        <div class="fnav-row">
+                            <a href="#certifications" class="footer-nav-link fnav-item">Certifications</a>
+                            <a href="#skill" class="footer-nav-link fnav-item">Skills</a>
+                        </div>
+                        <!-- Ligne 4 : Portfolio · Contact -->
+                        <div class="fnav-row">
+                            <a href="#portfolio" class="footer-nav-link fnav-item">Portfolio</a>
+                            <a href="#contact" class="footer-nav-link fnav-item">Contact</a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Contact info -->
@@ -1442,29 +1452,61 @@
     <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- Mobile Bottom Navigation -->
-    <nav class="mobile-bottom-nav" id="mobileBottomNav">
-        <a href="#home"      class="mob-nav-item active" data-section="home">
-            <i class="fa fa-home"></i>
-            <span>Home</span>
-        </a>
-        <a href="#about"     class="mob-nav-item" data-section="about">
-            <i class="fa fa-user"></i>
-            <span>About</span>
-        </a>
-        <a href="#skill"     class="mob-nav-item" data-section="skill">
-            <i class="fa fa-code"></i>
-            <span>Skills</span>
-        </a>
-        <a href="#portfolio" class="mob-nav-item" data-section="portfolio">
-            <i class="fa fa-images"></i>
-            <span>Gallery</span>
-        </a>
-        <a href="#contact"   class="mob-nav-item" data-section="contact">
-            <i class="fa fa-envelope"></i>
-            <span>Contact</span>
-        </a>
-    </nav>
+    <!-- Mobile Hamburger Button -->
+    <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="nb"></span>
+        <span class="nb"></span>
+        <span class="nb"></span>
+    </button>
+
+    <!-- Fullscreen Navigation Panel -->
+    <div class="nf-overlay" id="nfOverlay" aria-hidden="true" role="dialog" aria-label="Navigation">
+        <button class="nf-close" id="nfClose" aria-label="Fermer"><i class="fa fa-times"></i></button>
+        <div class="nf-brand"><span>Yaya</span>Folio</div>
+        <nav class="nf-nav" role="navigation">
+            <!-- Row 1: Home · About -->
+            <div class="nf-row">
+                <a href="#home" class="nf-link" data-nfsec="home">
+                    <span class="nf-lbl">Home</span>
+                    <span class="nf-line"></span>
+                </a>
+                <a href="#about" class="nf-link" data-nfsec="about">
+                    <span class="nf-lbl">About</span>
+                    <span class="nf-line"></span>
+                </a>
+            </div>
+            <!-- Row 2: Education & Experience -->
+            <div class="nf-row nf-row--full">
+                <a href="#qualification" class="nf-link" data-nfsec="qualification">
+                    <span class="nf-lbl">Education &amp; Experience</span>
+                    <span class="nf-line"></span>
+                </a>
+            </div>
+            <!-- Row 3: Certifications · Skills -->
+            <div class="nf-row">
+                <a href="#certifications" class="nf-link" data-nfsec="certifications">
+                    <span class="nf-lbl">Certifications</span>
+                    <span class="nf-line"></span>
+                </a>
+                <a href="#skill" class="nf-link" data-nfsec="skill">
+                    <span class="nf-lbl">Skills</span>
+                    <span class="nf-line"></span>
+                </a>
+            </div>
+            <!-- Row 4: Portfolio · Contact -->
+            <div class="nf-row">
+                <a href="#portfolio" class="nf-link" data-nfsec="portfolio">
+                    <span class="nf-lbl">Portfolio</span>
+                    <span class="nf-line"></span>
+                </a>
+                <a href="#contact" class="nf-link" data-nfsec="contact">
+                    <span class="nf-lbl">Contact</span>
+                    <span class="nf-line"></span>
+                </a>
+            </div>
+        </nav>
+        <a href="#contact" class="nf-cta" id="nfCta">Hire Me →</a>
+    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1487,32 +1529,64 @@
     <script src="js/main.js"></script>
 
     <script>
+        /* ── Fullscreen Navigation Panel ── */
         (function () {
-            var sections = ['home', 'about', 'qualification', 'certifications', 'skill', 'service', 'portfolio', 'contact'];
-            var tabMap   = { home: 'home', about: 'about', qualification: 'about', certifications: 'portfolio', skill: 'skill', service: 'skill', portfolio: 'portfolio', contact: 'contact' };
-            var items    = document.querySelectorAll('.mob-nav-item');
+            var burger   = document.getElementById('navBurger');
+            var overlay  = document.getElementById('nfOverlay');
+            var closeBtn = document.getElementById('nfClose');
+            var cta      = document.getElementById('nfCta');
+            var links    = overlay.querySelectorAll('.nf-link');
 
-            function setActive(sectionKey) {
-                var tab = tabMap[sectionKey] || sectionKey;
-                items.forEach(function (el) {
-                    el.classList.toggle('active', el.dataset.section === tab);
+            function open() {
+                overlay.classList.add('is-open');
+                overlay.setAttribute('aria-hidden', 'false');
+                burger.classList.add('is-open');
+                burger.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function close() {
+                overlay.classList.remove('is-open');
+                overlay.setAttribute('aria-hidden', 'true');
+                burger.classList.remove('is-open');
+                burger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+
+            burger.addEventListener('click', open);
+            closeBtn.addEventListener('click', close);
+            cta.addEventListener('click', close);
+            links.forEach(function (l) { l.addEventListener('click', close); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+            /* Active section detection — updates underline in open panel */
+            var secs = ['home', 'about', 'qualification', 'certifications', 'skill', 'service', 'portfolio', 'contact'];
+            var nfMap = {
+                home: 'home', about: 'about',
+                qualification: 'qualification',
+                certifications: 'certifications',
+                skill: 'skill', service: 'skill',
+                portfolio: 'portfolio', contact: 'contact'
+            };
+
+            function setActive(id) {
+                var tab = nfMap[id] || id;
+                links.forEach(function (l) {
+                    l.classList.toggle('active', l.dataset.nfsec === tab);
                 });
             }
 
-            function onScroll() {
-                var scrollY  = window.scrollY || window.pageYOffset;
-                var current  = sections[0];
-                sections.forEach(function (id) {
+            window.addEventListener('scroll', function () {
+                var sy  = window.scrollY || window.pageYOffset;
+                var cur = secs[0];
+                secs.forEach(function (id) {
                     var el = document.getElementById(id);
-                    if (el && el.getBoundingClientRect().top + window.scrollY - 120 <= scrollY) {
-                        current = id;
-                    }
+                    if (el && el.getBoundingClientRect().top + window.scrollY - 150 <= sy) cur = id;
                 });
-                setActive(current);
-            }
+                setActive(cur);
+            }, { passive: true });
 
-            window.addEventListener('scroll', onScroll, { passive: true });
-            onScroll();
+            setActive('home');
         })();
     </script>
 
@@ -1524,6 +1598,23 @@
                 var pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
                 bar.style.width = Math.min(pct, 100) + '%';
             }, { passive: true });
+        })();
+    </script>
+
+    <script>
+        /* Navbar glassmorphism on scroll */
+        (function () {
+            var nav = document.querySelector('.navbar-light');
+            if (!nav) return;
+            function onScroll() {
+                if (window.scrollY > 60) {
+                    nav.classList.add('nav-scrolled');
+                } else {
+                    nav.classList.remove('nav-scrolled');
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
         })();
     </script>
 
