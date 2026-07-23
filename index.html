@@ -628,6 +628,11 @@
                             <span class="tech-tag">Angular</span>
                             <span class="tech-tag">GitHub Actions</span>
                         </div>
+                        <div class="mt-3">
+                            <a href="#portfolio" class="btn-attestation" id="dircmat-gallery-btn">
+                                <i class="fa fa-images mr-1"></i> Voir les captures du projet (46)
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -1690,6 +1695,13 @@
             setTimeout(function () {
                 var mobileFilter = document.querySelector('#portfolio-flters li[data-filter=".second"]');
                 if (mobileFilter) mobileFilter.click();
+            }, 600);
+        });
+
+        document.getElementById('dircmat-gallery-btn').addEventListener('click', function () {
+            setTimeout(function () {
+                var webFilter = document.querySelector('#portfolio-flters li[data-filter=".first"]');
+                if (webFilter) webFilter.click();
             }, 600);
         });
     </script>
