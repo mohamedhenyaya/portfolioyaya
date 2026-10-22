@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <title>Yaya Mohamedhen</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Yaya Mohamedhen, Full Stack Developer, Software Engineer, Java, Spring Boot, Angular, React, Portfolio" name="keywords">
-    <meta content="Portfolio de Yaya Mohamedhen – Ingénieur Logiciel & Full Stack Developer spécialisé Java, Spring Boot, Angular, React." name="description">
-    <meta property="og:title" content="Yaya Mohamedhen – Full Stack Developer">
-    <meta property="og:description" content="Portfolio de Yaya Mohamedhen – Ingénieur Logiciel & Full Stack Developer.">
+    <meta content="Yaya Mohamedhen, Développeur Full Stack, Java, Spring Boot, Angular, Alternance, Stage alterné, INGETIS Paris, Portfolio" name="keywords">
+    <meta content="Portfolio de Yaya Mohamedhen – Développeur Full Stack Java / Angular, en Mastère à INGETIS Paris, à la recherche d'un stage alterné." name="description">
+    <meta property="og:title" content="Yaya Mohamedhen – Développeur Full Stack Java / Angular">
+    <meta property="og:description" content="Développeur Full Stack Java / Angular à la recherche d'un stage alterné – rythme 1 semaine école / 3 semaines entreprise.">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
             top: 0; left: 0;
             height: 3px;
             width: 0%;
-            background: linear-gradient(90deg, #06A3DA, #1565C0);
+            background: linear-gradient(90deg, #06B6D4, #4F46E5);
             z-index: 99999;
             transition: width 0.08s linear;
             pointer-events: none;
@@ -71,13 +71,13 @@
             .nav-burger { display: flex; }
         }
         .nav-burger:hover {
-            box-shadow: 0 4px 20px rgba(21,101,192,0.25);
+            box-shadow: 0 4px 20px rgba(79, 70, 229,0.25);
             transform: scale(1.05);
         }
         .nb {
             display: block;
             width: 20px; height: 2px;
-            background: #1565C0;
+            background: #4F46E5;
             border-radius: 2px;
             transition: transform .3s ease, opacity .3s ease;
         }
@@ -191,7 +191,7 @@
 
         .lb-nav a.lb-prev:hover,
         .lb-nav a.lb-next:hover {
-            background-color: #06A3DA !important;
+            background-color: #06B6D4 !important;
             transform: translateY(-50%) scale(1.08) !important;
         }
 
@@ -219,16 +219,16 @@
         </button>
         <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
             <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#qualification" class="nav-item nav-link">Quality</a>
-                <a href="#certifications" class="nav-item nav-link">Certs</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#service" class="nav-item nav-link">Service</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#home" class="nav-item nav-link active">Accueil</a>
+                <a href="#about" class="nav-item nav-link">À propos</a>
+                <a href="#qualification" class="nav-item nav-link">Parcours</a>
+                <a href="#certifications" class="nav-item nav-link">Certifications</a>
+                <a href="#skill" class="nav-item nav-link">Compétences</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
+                <a href="#portfolio" class="nav-item nav-link">Projets</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block"><i class="fa-solid fa-handshake mr-1"></i> Me recruter</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -263,21 +263,22 @@
             </div>
             <!-- Profile Text -->
             <div class="col-lg-7 text-center text-lg-left">
-                <h3 class="text-white font-weight-normal mb-3">I'm</h3>
+                <div class="hero-status"><span class="hero-status-dot"></span>Recherche un stage alterné · 1 sem. école / 3 sem. entreprise</div>
+                <h3 class="text-white font-weight-normal mb-3">Bonjour, je suis</h3>
                 <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Yaya Mohamedhen</h1>
                 <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                <div class="typed-text d-none">Software Engineer, Fullstack Developer</div>
+                <div class="typed-text d-none">Développeur Full Stack Java / Angular, Futur Architecte Logiciel, Spring Boot &amp; Angular Developer</div>
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                     <!-- Button to Download CV -->
                     <a href="img/resume/CV_Yaya_Mohamedhen.pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-light mr-5">
-                        Download CV
+                        <i class="fa-solid fa-file-arrow-down mr-1"></i> Télécharger mon CV
                     </a> 
                     <!-- Play Video Button -->
                     <button type="button" class="btn-play" data-toggle="modal"
                         data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                         <span></span>
                     </button>
-                    <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
+                    <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Voir la vidéo</h5>
                 </div>
             </div>
         </div>
@@ -298,8 +299,8 @@
 <div class="container-fluid py-5" id="about">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase" aria-hidden="true">About</h1>
-            <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Profil</h1>
+            <h1 class="position-absolute text-uppercase text-primary">À propos</h1>
         </div>
         <div class="row align-items-center">
 
@@ -310,103 +311,120 @@
                 </div>
                 <div class="row about-stats mt-4 mx-0">
                     <div class="col-4 text-center px-1">
-                        <h4 class="text-primary font-weight-bold mb-0">2+</h4>
-                        <small class="text-muted">Years Exp.</small>
+                        <h4 class="text-primary font-weight-bold mb-0">17</h4>
+                        <small class="text-muted">Mois d'exp.</small>
                     </div>
                     <div class="col-4 text-center px-1 about-stats-sep">
                         <h4 class="text-primary font-weight-bold mb-0">50+</h4>
-                        <small class="text-muted">Projects</small>
+                        <small class="text-muted">Projets</small>
                     </div>
                     <div class="col-4 text-center px-1">
-                        <h4 class="text-primary font-weight-bold mb-0">M2</h4>
-                        <small class="text-muted">Degree</small>
+                        <h4 class="text-primary font-weight-bold mb-0">Bac+5</h4>
+                        <small class="text-muted">Master 2025</small>
                     </div>
                 </div>
             </div>
 
             <!-- Info -->
             <div class="col-lg-8">
-                <p class="text-primary font-weight-bold mb-1" style="font-size:13px; letter-spacing:1px; text-transform:uppercase;">Software Engineer · Fullstack Developer</p>
-                <h3 class="font-weight-bold mb-3" style="color:#1a1a2e;">Yaya Mohamedhen</h3>
-                <p class="text-muted mb-4" style="line-height:1.8;">Passionate about building efficient, scalable, and user-friendly web applications. With strong expertise in front-end and back-end development, I specialize in delivering innovative digital solutions using modern frameworks and tools. Always eager to solve complex problems and collaborate on impactful projects.</p>
+                <p class="text-primary font-weight-bold mb-1" style="font-size:13px; letter-spacing:1px; text-transform:uppercase;">Développeur Full Stack · Java / Angular</p>
+                <h3 class="font-weight-bold mb-3" style="color:#0f172a;">Yaya Mohamedhen</h3>
+                <p class="about-lead mb-3">Développeur Full Stack Java / Angular, diplômé d’un Master en informatique (2025). Lors de mon stage de fin d’études de 7 mois, j’ai refondu en Java / Angular un portail PHP pour <strong>SFR</strong>, en méthode Agile et en lien direct avec les équipes métier. J’ai ensuite passé 10 mois chez <strong>WinServices</strong> sur plusieurs projets Spring Boot / Angular.</p>
+                <p class="about-lead mb-4">Je suis aujourd’hui en <strong>Mastère Expert en Architecture et Développement Logiciel</strong> à <strong>INGETIS Paris</strong> et je recherche un <strong>stage alterné</strong>, avec une ouverture à une alternance puis à un CDI. Curieux et motivé par l’apprentissage continu, je me forme régulièrement par des certifications (Spring Professional, AWS Developer – Associate).</p>
+
+                <!-- Disponibilité -->
+                <div class="availability-card">
+                    <div class="availability-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="availability-text">
+                        <strong>Disponible pour un stage alterné</strong>
+                        <span>Rythme : 1 semaine à l’école, 3 semaines en entreprise</span>
+                    </div>
+                    <div class="rhythm" aria-hidden="true">
+                        <div class="rhythm-bar"><span></span><span></span><span></span><span></span></div>
+                        <div class="rhythm-legend">
+                            <span class="lg-school"><i class="fa-solid fa-graduation-cap"></i>1 sem. école</span>
+                            <span class="lg-company"><i class="fa-solid fa-building"></i>3 sem. entreprise</span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row mb-4">
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fa fa-user text-primary"></i>
+                            <i class="fa-solid fa-user text-primary"></i>
                             <div>
-                                <span class="about-info-label">Name</span>
+                                <span class="about-info-label">Nom</span>
                                 <span class="about-info-value">Yaya Mohamedhen</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fa fa-birthday-cake text-primary"></i>
+                            <i class="fa-solid fa-school text-primary"></i>
                             <div>
-                                <span class="about-info-label">Birthday</span>
-                                <span class="about-info-value">05 June 2001</span>
+                                <span class="about-info-label">École</span>
+                                <span class="about-info-value">INGETIS Paris</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fa fa-graduation-cap text-primary"></i>
+                            <i class="fa-solid fa-graduation-cap text-primary"></i>
                             <div>
-                                <span class="about-info-label">Degree</span>
-                                <span class="about-info-value">Master in CS – Offshoring</span>
+                                <span class="about-info-label">Formation</span>
+                                <span class="about-info-value">Mastère Expert en Architecture et Développement Logiciel</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fa fa-briefcase text-primary"></i>
+                            <i class="fa-solid fa-award text-primary"></i>
                             <div>
-                                <span class="about-info-label">Experience</span>
-                                <span class="about-info-value">2 Years</span>
+                                <span class="about-info-label">Diplôme</span>
+                                <span class="about-info-value">Master en informatique (2025)</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fab fa-whatsapp text-primary"></i>
+                            <i class="fa-solid fa-mobile-screen-button text-primary"></i>
                             <div>
-                                <span class="about-info-label">WhatsApp</span>
-                                <span class="about-info-value">+222 20 12 27 24</span>
+                                <span class="about-info-label">Téléphone</span>
+                                <span class="about-info-value"><a href="tel:+33753852696">+33 7 53 85 26 96</a></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fa fa-envelope text-primary"></i>
+                            <i class="fa-solid fa-envelope text-primary"></i>
                             <div>
                                 <span class="about-info-label">Email</span>
-                                <span class="about-info-value">mohamedhen.yaya@gmail.com</span>
+                                <span class="about-info-value"><a href="mailto:mohamedhen.yaya@gmail.com">mohamedhen.yaya@gmail.com</a></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fa fa-map-marker-alt text-primary"></i>
+                            <i class="fa-solid fa-location-dot text-primary"></i>
                             <div>
-                                <span class="about-info-label">Location</span>
-                                <span class="about-info-value">Salé, Maroc</span>
+                                <span class="about-info-label">Localisation</span>
+                                <span class="about-info-value">Choisy-le-Roi, France</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div class="about-info-item">
-                            <i class="fa fa-check-circle text-primary"></i>
+                            <i class="fa-solid fa-briefcase text-primary"></i>
                             <div>
-                                <span class="about-info-label">Freelance</span>
-                                <span class="about-info-value" style="color:#28a745; font-weight:700;">Available</span>
+                                <span class="about-info-label">Recherche</span>
+                                <span class="about-info-value" style="color:#059669; font-weight:700;">Stage alterné → Alternance → CDI</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a href="#contact" class="btn btn-primary mr-3">Contact Me</a>
-                <a href="img/resume/CV_Yaya_Mohamedhen.pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-primary">Download CV</a>
+                <a href="#contact" class="btn btn-primary mr-3"><i class="fa-solid fa-paper-plane mr-1"></i> Me contacter</a>
+                <a href="img/resume/CV_Yaya_Mohamedhen.pdf" download="Yaya_Mohamedhen_CV.pdf" class="btn btn-outline-primary"><i class="fa-solid fa-file-arrow-down mr-1"></i> Télécharger mon CV</a>
             </div>
         </div>
     </div>
@@ -419,11 +437,11 @@
 <div class="container-fluid py-5" id="qualification">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase" aria-hidden="true">Quality</h1>
-            <h1 class="position-absolute text-uppercase text-primary">Education &amp; Experience</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Parcours</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Expériences &amp; Formation</h1>
         </div>
         <!-- ===== EXPERIENCE ===== -->
-        <h3 class="section-col-title mb-4"><i class="fa fa-briefcase mr-2"></i>My Experience</h3>
+        <h3 class="section-col-title mb-4"><i class="fa-solid fa-briefcase mr-2"></i>Expériences professionnelles</h3>
         <div class="row mb-5">
 
             <!-- Colonne gauche : postes les plus récents -->
@@ -433,7 +451,7 @@
                 <div class="timeline-card timeline-card-featured mb-4">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-current">Professional</span>
+                            <span class="tl-badge tl-badge-current">Professionnel</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Fév 2026 – Présent <span class="tl-now-dot"></span></span>
                         </div>
                         <h5 class="tl-title mt-2 mb-0">Full Stack Developer – Civil Registry System (WEVA)</h5>
@@ -503,12 +521,12 @@
                 <div class="timeline-card mb-4">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-academic">Academic Project</span>
+                            <span class="tl-badge tl-badge-academic">Projet académique</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Nov – Déc 2024</span>
                         </div>
                         <h5 class="tl-title mt-2 mb-0">Industrial Production Data Management</h5>
                         <p class="tl-company mb-0">
-                            <i class="fa fa-map-marker-alt mr-1"></i>Mohammed V University &nbsp;·&nbsp;
+                            <i class="fa fa-map-marker-alt mr-1"></i>Université Mohammed V &nbsp;·&nbsp;
                             <a href="https://sia-dodge-prod.vercel.app/" target="_blank" class="text-primary font-weight-bold">SIA-Dodge ↗</a>
                         </p>
                     </div>
@@ -534,11 +552,11 @@
                 <div class="timeline-card mb-4">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-academic">Academic Project</span>
+                            <span class="tl-badge tl-badge-academic">Projet académique</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Déc 2023 – Fév 2024</span>
                         </div>
                         <h5 class="tl-title mt-2 mb-0">Full Stack Microservices Application </h5>
-                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>Mohammed V University of Rabat</p>
+                        <p class="tl-company mb-0"><i class="fa fa-map-marker-alt mr-1"></i>Université Mohammed V de Rabat</p>
                     </div>
                     <div class="timeline-card-body">
                         <p class="small text-muted mb-2">Application distribuée en microservices avec déploiement conteneurisé.</p>
@@ -569,7 +587,7 @@
                 <div class="timeline-card timeline-card-featured mb-4">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-current">Professional</span>
+                            <span class="tl-badge tl-badge-current">Professionnel</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Fév 2026 – Présent <span class="tl-now-dot"></span></span>
                         </div>
                         <h5 class="tl-title mt-2 mb-0">Full Stack Developer – Birth Registration System</h5>
@@ -680,7 +698,7 @@
                 <div class="timeline-card timeline-card-featured mb-4">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-personal">Personal Project</span>
+                            <span class="tl-badge tl-badge-personal">Projet personnel</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Fév – Avr 2024</span>
                         </div>
                         <h5 class="tl-title mt-2 mb-0">ShopInsight – Smart E-Commerce Platform</h5>
@@ -709,7 +727,7 @@
                 <div class="timeline-card mb-4">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-pro">Internship</span>
+                            <span class="tl-badge tl-badge-pro">Stage</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Mai – Août 2023</span>
                         </div>
                         <h5 class="tl-title mt-2 mb-0">Web Developer</h5>
@@ -736,22 +754,39 @@
         </div>
 
         <!-- ===== EDUCATION ===== -->
-        <h3 class="section-col-title mb-4"><i class="fa fa-graduation-cap mr-2"></i>My Education</h3>
+        <h3 class="section-col-title mb-4"><i class="fa-solid fa-graduation-cap mr-2"></i>Formation</h3>
         <div class="row">
 
+            <!-- Mastère INGETIS (en cours) -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="timeline-card timeline-card-featured h-100">
+                    <div class="timeline-card-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <span class="tl-badge tl-badge-current">Mastère · En cours</span>
+                            <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>Présent <span class="tl-now-dot"></span></span>
+                        </div>
+                        <h5 class="tl-title mt-2 mb-0">Mastère Expert en Architecture et Développement Logiciel</h5>
+                    </div>
+                    <div class="timeline-card-body">
+                        <p class="tl-institution"><i class="fa-solid fa-building-columns mr-2"></i><strong>INGETIS Paris</strong></p>
+                        <p class="mb-0 small text-muted">Rythme alterné : <strong>1 semaine école / 3 semaines entreprise</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Master -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-6 col-lg-3 mb-4">
                 <div class="timeline-card h-100">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-primary">Master</span>
+                            <span class="tl-badge tl-badge-primary">Master · 2025</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>2023 – 2025</span>
                         </div>
-                        <h5 class="tl-title mt-2 mb-0">Master in Computer Science – Offshoring</h5>
+                        <h5 class="tl-title mt-2 mb-0">Master en Informatique – Offshoring</h5>
                         <p class="tl-subtitle mb-0">Informatique Appliquée</p>
                     </div>
                     <div class="timeline-card-body">
-                        <p class="tl-institution"><i class="fa fa-university mr-2"></i><strong>Mohammed V University of Rabat</strong></p>
+                        <p class="tl-institution"><i class="fa fa-university mr-2"></i><strong>Université Mohammed V de Rabat</strong></p>
                         <div class="d-flex align-items-center justify-content-between flex-wrap" style="gap:8px;">
                             <p class="mb-0 small text-muted">Diplômé avec <span class="badge badge-success" style="font-size:10px;">Mention 2025</span></p>
                             <a href="img/Attestation de Réussite 2025 IAO.pdf" target="_blank" class="btn-attestation mt-1">
@@ -763,19 +798,19 @@
             </div>
 
             <!-- Bachelor -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-6 col-lg-3 mb-4">
                 <div class="timeline-card h-100">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-primary">Bachelor</span>
+                            <span class="tl-badge tl-badge-primary">Licence</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>2020 – 2023</span>
                         </div>
-                        <h5 class="tl-title mt-2 mb-0">Mathematics & Computer Science</h5>
+                        <h5 class="tl-title mt-2 mb-0">Mathématiques &amp; Informatique</h5>
                     </div>
                     <div class="timeline-card-body">
-                        <p class="tl-institution"><i class="fa fa-university mr-2"></i><strong>Nouakchott University</strong></p>
+                        <p class="tl-institution"><i class="fa fa-university mr-2"></i><strong>Université de Nouakchott</strong></p>
                         <div class="d-flex align-items-center justify-content-between flex-wrap" style="gap:8px;">
-                            <p class="mb-0 small text-muted"><strong class="text-primary">High Honors</strong></p>
+                            <p class="mb-0 small text-muted"><strong class="text-primary">Mention Très Bien</strong></p>
                             <a href="img/Attestation de Diplôme2023.pdf" target="_blank" class="btn-attestation mt-1">
                                 <i class="fa fa-file-pdf mr-1"></i>Attestation
                             </a>
@@ -785,14 +820,14 @@
             </div>
 
             <!-- Bac -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-6 col-lg-3 mb-4">
                 <div class="timeline-card h-100">
                     <div class="timeline-card-header">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <span class="tl-badge tl-badge-primary">Baccalaureate</span>
+                            <span class="tl-badge tl-badge-primary">Baccalauréat</span>
                             <span class="tl-date"><i class="far fa-calendar-alt mr-1"></i>2020</span>
                         </div>
-                        <h5 class="tl-title mt-2 mb-0">Bac C – Mathematics</h5>
+                        <h5 class="tl-title mt-2 mb-0">Bac C – Mathématiques</h5>
                     </div>
                     <div class="timeline-card-body">
                         <p class="tl-institution"><i class="fa fa-school mr-2"></i><strong>Elkhiyar – Nouakchott</strong></p>
@@ -812,8 +847,8 @@
 <div class="container-fluid py-5" id="certifications">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase" aria-hidden="true">Certs</h1>
-            <h1 class="position-absolute text-uppercase text-primary">My Certifications</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Certifs</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Certifications</h1>
         </div>
         <div class="row justify-content-center">
 
@@ -822,7 +857,7 @@
                 <div class="timeline-card h-100" style="border-top: 4px solid #0062ff;">
                     <div class="timeline-card-header text-center">
                         <div class="mb-3">
-                            <i class="fa fa-code" style="font-size: 38px; color: #0062ff;"></i>
+                            <i class="fa-solid fa-wand-magic-sparkles cert-icon" style="color: #4F46E5;"></i>
                         </div>
                         <h5 class="tl-title mb-1">Code Generation and Optimization Using IBM Granite</h5>
                         <p class="tl-company mb-1"><i class="fa fa-building mr-1"></i>IBM · <span class="small text-muted"><i class="far fa-calendar-alt mr-1"></i>Avril 2025</span></p>
@@ -853,7 +888,7 @@
                 <div class="timeline-card h-100" style="border-top: 4px solid #0062ff;">
                     <div class="timeline-card-header text-center">
                         <div class="mb-3">
-                            <i class="fa fa-database" style="font-size: 38px; color: #0062ff;"></i>
+                            <i class="fa-solid fa-brain cert-icon" style="color: #7C3AED;"></i>
                         </div>
                         <h5 class="tl-title mb-1">Data Classification and Summarization Using IBM Granite</h5>
                         <p class="tl-company mb-1"><i class="fa fa-building mr-1"></i>IBM · <span class="small text-muted"><i class="far fa-calendar-alt mr-1"></i>Avril 2025</span></p>
@@ -879,6 +914,60 @@
                 </div>
             </div>
 
+            <!-- Spring Professional (en préparation) -->
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="timeline-card h-100">
+                    <div class="timeline-card-header text-center">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-leaf cert-icon" style="color: #6DB33F;"></i>
+                        </div>
+                        <h5 class="tl-title mb-1">Spring Certified Professional</h5>
+                        <p class="tl-company mb-1"><i class="fa-solid fa-building mr-1"></i>VMware / Broadcom · <span class="tl-badge tl-badge-progress">En préparation</span></p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <ul class="exp-bullets small mb-3">
+                            <li><strong>Spring Core</strong> : conteneur IoC, injection de dépendances, AOP</li>
+                            <li><strong>Spring Boot</strong> : auto-configuration, Actuator, tests</li>
+                            <li>Accès aux données avec <strong>Spring Data JPA</strong> et gestion des transactions</li>
+                            <li>APIs REST avec <strong>Spring MVC</strong> et sécurisation via <strong>Spring Security</strong></li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Framework</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Spring Security</span>
+                            <span class="tech-tag">JPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AWS Developer – Associate (en préparation) -->
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="timeline-card h-100">
+                    <div class="timeline-card-header text-center">
+                        <div class="mb-3">
+                            <i class="fa-brands fa-aws cert-icon" style="color: #FF9900;"></i>
+                        </div>
+                        <h5 class="tl-title mb-1">AWS Certified Developer – Associate</h5>
+                        <p class="tl-company mb-1"><i class="fa-solid fa-building mr-1"></i>Amazon Web Services · <span class="tl-badge tl-badge-progress">En préparation</span></p>
+                    </div>
+                    <div class="timeline-card-body">
+                        <ul class="exp-bullets small mb-3">
+                            <li>Développement et déploiement d'applications sur <strong>AWS</strong></li>
+                            <li>Services serverless : <strong>Lambda</strong>, <strong>API Gateway</strong>, <strong>DynamoDB</strong></li>
+                            <li>CI/CD avec <strong>CodePipeline</strong> et conteneurs (ECS / ECR)</li>
+                            <li>Sécurité : <strong>IAM</strong>, Cognito, gestion des secrets</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Lambda</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">IAM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -891,13 +980,13 @@
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
             <h1 class="display-1 text-uppercase" aria-hidden="true">Skills</h1>
-            <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Compétences</h1>
         </div>
         <div class="row">
             <!-- Programming Languages -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-category p-4 h-100" style="border-left: 4px solid #06A3DA;">
-                    <h5 class="font-weight-bold mb-3 text-primary"><i class="fa fa-code mr-2"></i>Programming Languages</h5>
+                <div class="skill-category p-4 h-100" style="border-left: 4px solid #06B6D4;">
+                    <h5 class="font-weight-bold mb-3 text-primary"><i class="fa-solid fa-code mr-2"></i>Langages de programmation</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Java</span>
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Python</span>
@@ -914,7 +1003,7 @@
             <!-- Frameworks & Libraries -->
             <div class="col-lg-6 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #28a745;">
-                    <h5 class="font-weight-bold mb-3 text-success"><i class="fa fa-layer-group mr-2"></i>Frameworks &amp; Libraries</h5>
+                    <h5 class="font-weight-bold mb-3 text-success"><i class="fa-brands fa-java mr-2"></i>Frameworks &amp; Bibliothèques</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring Boot</span>
                         <span class="badge badge-success mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Spring MVC</span>
@@ -937,7 +1026,7 @@
             <!-- Database Systems -->
             <div class="col-lg-6 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #17a2b8;">
-                    <h5 class="font-weight-bold mb-3 text-info"><i class="fa fa-database mr-2"></i>Database Systems</h5>
+                    <h5 class="font-weight-bold mb-3 text-info"><i class="fa-solid fa-database mr-2"></i>Bases de données</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">PostgreSQL</span>
                         <span class="badge badge-info mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Oracle</span>
@@ -952,7 +1041,7 @@
             <!-- DevOps / CI-CD -->
             <div class="col-lg-6 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #fd7e14;">
-                    <h5 class="font-weight-bold mb-3" style="color: #fd7e14;"><i class="fa fa-server mr-2"></i>DevOps / CI-CD</h5>
+                    <h5 class="font-weight-bold mb-3" style="color: #fd7e14;"><i class="fa-brands fa-docker mr-2"></i>DevOps / CI-CD</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Docker</span>
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #fd7e14; color: #fff;">Kubernetes</span>
@@ -968,7 +1057,7 @@
             <!-- Testing & Quality -->
             <div class="col-lg-4 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #dc3545;">
-                    <h5 class="font-weight-bold mb-3 text-danger"><i class="fa fa-check-circle mr-2"></i>Testing &amp; Quality</h5>
+                    <h5 class="font-weight-bold mb-3 text-danger"><i class="fa-solid fa-vial-circle-check mr-2"></i>Tests &amp; Qualité</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">JUnit</span>
                         <span class="badge badge-danger mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Mockito</span>
@@ -981,7 +1070,7 @@
             <!-- Security -->
             <div class="col-lg-4 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #6f42c1;">
-                    <h5 class="font-weight-bold mb-3" style="color: #6f42c1;"><i class="fa fa-shield-alt mr-2"></i>Security</h5>
+                    <h5 class="font-weight-bold mb-3" style="color: #6f42c1;"><i class="fa-solid fa-shield-halved mr-2"></i>Sécurité</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #6f42c1; color: #fff;">Spring Security</span>
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #6f42c1; color: #fff;">JWT</span>
@@ -992,7 +1081,7 @@
             <!-- Methodologies & Tools -->
             <div class="col-lg-4 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #6c757d;">
-                    <h5 class="font-weight-bold mb-3 text-secondary"><i class="fa fa-tools mr-2"></i>Methodologies &amp; Tools</h5>
+                    <h5 class="font-weight-bold mb-3 text-secondary"><i class="fa-solid fa-screwdriver-wrench mr-2"></i>Méthodes &amp; Outils</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">Git</span>
                         <span class="badge badge-secondary mr-2 mb-2 px-3 py-2" style="font-size: 13px;">GitHub</span>
@@ -1012,7 +1101,7 @@
             <!-- Operating Systems -->
             <div class="col-lg-6 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #20c997;">
-                    <h5 class="font-weight-bold mb-3" style="color: #20c997;"><i class="fa fa-desktop mr-2"></i>Operating Systems</h5>
+                    <h5 class="font-weight-bold mb-3" style="color: #20c997;"><i class="fa-brands fa-linux mr-2"></i>Systèmes d'exploitation</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #20c997; color: #fff;">Unix / Linux</span>
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #20c997; color: #fff;">Windows</span>
@@ -1023,7 +1112,7 @@
             <!-- Protocols -->
             <div class="col-lg-6 mb-4">
                 <div class="skill-category p-4 h-100" style="border-left: 4px solid #e83e8c;">
-                    <h5 class="font-weight-bold mb-3" style="color: #e83e8c;"><i class="fa fa-network-wired mr-2"></i>Protocols</h5>
+                    <h5 class="font-weight-bold mb-3" style="color: #e83e8c;"><i class="fa-solid fa-network-wired mr-2"></i>Protocoles</h5>
                     <div class="d-flex flex-wrap">
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">REST</span>
                         <span class="badge mr-2 mb-2 px-3 py-2" style="font-size: 13px; background-color: #e83e8c; color: #fff;">SOAP</span>
@@ -1035,25 +1124,25 @@
             </div>
             <!-- Languages -->
             <div class="col-12 mb-4">
-                <div class="skill-category p-4" style="border-left: 4px solid #06A3DA;">
-                    <h5 class="font-weight-bold mb-3 text-primary"><i class="fa fa-globe mr-2"></i>Languages</h5>
+                <div class="skill-category p-4" style="border-left: 4px solid #06B6D4;">
+                    <h5 class="font-weight-bold mb-3 text-primary"><i class="fa-solid fa-language mr-2"></i>Langues</h5>
                     <div class="row">
                         <div class="col-sm-4 text-center mb-3 mb-sm-0">
                             <div class="p-3" style="background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
-                                <h6 class="font-weight-bold mb-1">Arabic</h6>
-                                <span class="badge badge-primary px-3 py-2" style="font-size: 13px;">Native</span>
+                                <h6 class="font-weight-bold mb-1">Arabe</h6>
+                                <span class="badge badge-primary px-3 py-2" style="font-size: 13px;">Langue maternelle</span>
                             </div>
                         </div>
                         <div class="col-sm-4 text-center mb-3 mb-sm-0">
                             <div class="p-3" style="background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
-                                <h6 class="font-weight-bold mb-1">French</h6>
-                                <span class="badge badge-success px-3 py-2" style="font-size: 13px;">Fluent</span>
+                                <h6 class="font-weight-bold mb-1">Français</h6>
+                                <span class="badge badge-success px-3 py-2" style="font-size: 13px;">Courant</span>
                             </div>
                         </div>
                         <div class="col-sm-4 text-center">
                             <div class="p-3" style="background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
-                                <h6 class="font-weight-bold mb-1">English</h6>
-                                <span class="badge badge-info px-3 py-2" style="font-size: 13px;">Technical</span>
+                                <h6 class="font-weight-bold mb-1">Anglais</h6>
+                                <span class="badge badge-info px-3 py-2" style="font-size: 13px;">Technique</span>
                             </div>
                         </div>
                     </div>
@@ -1072,8 +1161,8 @@
 <div class="container-fluid py-5" id="service">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-            <h1 class="display-1 text-uppercase" aria-hidden="true">Service</h1>
-            <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+            <h1 class="display-1 text-uppercase" aria-hidden="true">Services</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Ce que je fais</h1>
         </div>
         <div class="row">
 
@@ -1081,10 +1170,10 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="svc2-card" data-color="blue">
                     <div class="svc2-header">
-                        <div class="svc2-icon"><i class="fa fa-cogs"></i></div>
+                        <div class="svc2-icon"><i class="fa-solid fa-sitemap"></i></div>
                         <span class="svc2-num">01</span>
                     </div>
-                    <h5 class="svc2-title">Software Engineering</h5>
+                    <h5 class="svc2-title">Architecture &amp; Génie Logiciel</h5>
                     <p class="svc2-desc">Conception et développement de solutions logicielles robustes et maintenables — architecture système, modélisation UML et cycle complet du génie logiciel.</p>
                     <a href="#contact" class="svc2-cta">Me contacter <i class="fa fa-long-arrow-alt-right"></i></a>
                 </div>
@@ -1094,7 +1183,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="svc2-card" data-color="cyan">
                     <div class="svc2-header">
-                        <div class="svc2-icon"><i class="fa fa-globe"></i></div>
+                        <div class="svc2-icon"><i class="fa-solid fa-laptop-code"></i></div>
                         <span class="svc2-num">02</span>
                     </div>
                     <h5 class="svc2-title">Développement Web</h5>
@@ -1107,7 +1196,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="svc2-card" data-color="violet">
                     <div class="svc2-header">
-                        <div class="svc2-icon"><i class="fa fa-mobile-alt"></i></div>
+                        <div class="svc2-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
                         <span class="svc2-num">03</span>
                     </div>
                     <h5 class="svc2-title">Développement Mobile</h5>
@@ -1120,7 +1209,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="svc2-card" data-color="teal">
                     <div class="svc2-header">
-                        <div class="svc2-icon"><i class="fa fa-desktop"></i></div>
+                        <div class="svc2-icon"><i class="fa-solid fa-display"></i></div>
                         <span class="svc2-num">04</span>
                     </div>
                     <h5 class="svc2-title">Développement Desktop</h5>
@@ -1133,7 +1222,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="svc2-card" data-color="amber">
                     <div class="svc2-header">
-                        <div class="svc2-icon"><i class="fa fa-server"></i></div>
+                        <div class="svc2-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
                         <span class="svc2-num">05</span>
                     </div>
                     <h5 class="svc2-title">DevOps &amp; Hébergement</h5>
@@ -1146,7 +1235,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="svc2-card" data-color="emerald">
                     <div class="svc2-header">
-                        <div class="svc2-icon"><i class="fa fa-lightbulb"></i></div>
+                        <div class="svc2-icon"><i class="fa-solid fa-lightbulb"></i></div>
                         <span class="svc2-num">06</span>
                     </div>
                     <h5 class="svc2-title">Étude de Faisabilité</h5>
@@ -1165,13 +1254,13 @@
     <div class="container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center mb-4">
-                <h1 class="display-1 text-uppercase" aria-hidden="true">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+                <h1 class="display-1 text-uppercase" aria-hidden="true">Projets</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Mes Projets</h1>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-2">
                     <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">Tous</li>
                         <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Web</li>
                         <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Mobile</li>
                         <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Desktop</li>
@@ -1372,41 +1461,41 @@
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center mb-5">
             <h1 class="display-1 text-uppercase" aria-hidden="true">Contact</h1>
-            <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Me contacter</h1>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="contact-form">
-                    <h4 class="font-weight-bold mb-1" style="color: var(--ink-900, #0f172a); font-size: 1.3rem;">Send a Message</h4>
-                    <p class="mb-4" style="color: var(--ink-500, #64748b); font-size: 0.9rem;">I'll get back to you within 24 hours.</p>
+                    <h4 class="font-weight-bold mb-1" style="color: var(--ink-900, #0f172a); font-size: 1.3rem;">Envoyer un message</h4>
+                    <p class="mb-4" style="color: var(--ink-500, #64748b); font-size: 0.9rem;">Je vous réponds sous 24 h. Vous pouvez aussi m'appeler au <a href="tel:+33753852696">+33 7 53 85 26 96</a>.</p>
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="form-row mb-3">
                             <div class="control-group col-sm-6 mb-3 mb-sm-0">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
-                                    required="required" data-validation-required-message="Please enter your name" />
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom"
+                                    required="required" data-validation-required-message="Veuillez saisir votre nom" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group col-sm-6">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
-                                    required="required" data-validation-required-message="Please enter your email" />
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Votre email"
+                                    required="required" data-validation-required-message="Veuillez saisir votre email" />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="control-group mb-3">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                                required="required" data-validation-required-message="Please enter a subject" />
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Objet (ex. : Offre de stage alterné)"
+                                required="required" data-validation-required-message="Veuillez saisir un objet" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group mb-4">
-                            <textarea class="form-control" rows="5" id="message" name="message" placeholder="Your message..."
+                            <textarea class="form-control" rows="5" id="message" name="message" placeholder="Votre message..."
                                 required="required"
-                                data-validation-required-message="Please enter your message"></textarea>
+                                data-validation-required-message="Veuillez saisir votre message"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="text-center">
                             <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">
-                                <i class="fa fa-paper-plane mr-2"></i>Send Message
+                                <i class="fa-solid fa-paper-plane mr-2"></i>Envoyer
                             </button>
                         </div>
                     </form>
@@ -1426,17 +1515,17 @@
                 <!-- Brand & bio -->
                 <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-left">
                     <h3 class="font-weight-bold mb-2" style="color:#fff; letter-spacing:1px;">
-                        <span style="opacity:.7;">Yaya</span>Folio
+                        <span class="footer-brand-accent">Yaya</span>Folio
                     </h3>
                     <p class="mb-3" style="color:rgba(255,255,255,.75); font-size:.9rem; line-height:1.7;">
-                        Ingénieur Logiciel &amp; Full Stack Developer passionné par la création de solutions numériques performantes et scalables.
+                        Développeur Full Stack Java / Angular, en Mastère à INGETIS Paris. Disponible pour un stage alterné (1 sem. école / 3 sem. entreprise).
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start" style="gap:12px;">
                         <a href="mailto:mohamedhen.yaya@gmail.com" class="footer-social-btn" title="Email">
                             <i class="fa fa-envelope"></i>
                         </a>
-                        <a href="https://wa.me/22220122724" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="tel:+33753852696" class="footer-social-btn" title="Téléphone">
+                            <i class="fa-solid fa-phone"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/yaya-mohamedhen" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
@@ -1453,21 +1542,21 @@
                     <div class="fnav">
                         <!-- Ligne 1 : Home · About -->
                         <div class="fnav-row">
-                            <a href="#home" class="footer-nav-link fnav-item">Home</a>
-                            <a href="#about" class="footer-nav-link fnav-item">About</a>
+                            <a href="#home" class="footer-nav-link fnav-item">Accueil</a>
+                            <a href="#about" class="footer-nav-link fnav-item">À propos</a>
                         </div>
                         <!-- Ligne 2 : Education & Experience -->
                         <div class="fnav-row">
-                            <a href="#qualification" class="footer-nav-link fnav-item fnav-full">Education &amp; Experience</a>
+                            <a href="#qualification" class="footer-nav-link fnav-item fnav-full">Expériences &amp; Formation</a>
                         </div>
                         <!-- Ligne 3 : Certifications · Skills -->
                         <div class="fnav-row">
                             <a href="#certifications" class="footer-nav-link fnav-item">Certifications</a>
-                            <a href="#skill" class="footer-nav-link fnav-item">Skills</a>
+                            <a href="#skill" class="footer-nav-link fnav-item">Compétences</a>
                         </div>
                         <!-- Ligne 4 : Portfolio · Contact -->
                         <div class="fnav-row">
-                            <a href="#portfolio" class="footer-nav-link fnav-item">Portfolio</a>
+                            <a href="#portfolio" class="footer-nav-link fnav-item">Projets</a>
                             <a href="#contact" class="footer-nav-link fnav-item">Contact</a>
                         </div>
                     </div>
@@ -1477,20 +1566,21 @@
                 <div class="col-lg-4 text-center text-lg-right">
                     <h6 class="font-weight-bold text-uppercase mb-3" style="letter-spacing:1.5px; color:rgba(255,255,255,.6); font-size:.75rem;">Contact</h6>
                     <ul class="list-unstyled mb-3" style="color:rgba(255,255,255,.8); line-height:2.2; font-size:.9rem;">
-                        <li><i class="fa fa-map-marker-alt mr-2" style="color:rgba(255,255,255,.5);"></i>Salé, Maroc</li>
+                        <li><i class="fa fa-map-marker-alt mr-2" style="color:rgba(255,255,255,.5);"></i>Choisy-le-Roi, France</li>
                         <li><i class="fa fa-envelope mr-2" style="color:rgba(255,255,255,.5);"></i>mohamedhen.yaya@gmail.com</li>
-                        <li><i class="fab fa-whatsapp mr-2" style="color:rgba(255,255,255,.5);"></i>+222 20 12 27 24</li>
+                        <li><i class="fa-solid fa-phone mr-2" style="color:rgba(255,255,255,.5);"></i><a href="tel:+33753852696" style="color:inherit;">+33 7 53 85 26 96</a></li>
+                        <li><i class="fa-solid fa-school mr-2" style="color:rgba(255,255,255,.5);"></i>INGETIS Paris</li>
                     </ul>
                     <a href="img/resume/CV_Yaya_Mohamedhen.pdf" download="Yaya_Mohamedhen_CV.pdf"
                        class="btn btn-outline-light btn-sm px-4">
-                        <i class="fa fa-download mr-1"></i>Download CV
+                        <i class="fa-solid fa-file-arrow-down mr-1"></i>Télécharger mon CV
                     </a>
                 </div>
             </div>
 
             <hr style="border-color: rgba(255,255,255,.2); margin: 0 0 1.25rem;">
             <p class="text-center mb-0" style="color:rgba(255,255,255,.5); font-size:.82rem;">
-                &copy; 2026 Yaya Mohamedhen &mdash; All rights reserved.
+                &copy; 2026 Yaya Mohamedhen &mdash; Tous droits réservés.
             </p>
         </div>
     </div>
@@ -1518,18 +1608,18 @@
             <!-- Row 1: Home · About -->
             <div class="nf-row">
                 <a href="#home" class="nf-link" data-nfsec="home">
-                    <span class="nf-lbl">Home</span>
+                    <span class="nf-lbl">Accueil</span>
                     <span class="nf-line"></span>
                 </a>
                 <a href="#about" class="nf-link" data-nfsec="about">
-                    <span class="nf-lbl">About</span>
+                    <span class="nf-lbl">À propos</span>
                     <span class="nf-line"></span>
                 </a>
             </div>
             <!-- Row 2: Education & Experience -->
             <div class="nf-row nf-row--full">
                 <a href="#qualification" class="nf-link" data-nfsec="qualification">
-                    <span class="nf-lbl">Education &amp; Experience</span>
+                    <span class="nf-lbl">Expériences &amp; Formation</span>
                     <span class="nf-line"></span>
                 </a>
             </div>
@@ -1540,14 +1630,14 @@
                     <span class="nf-line"></span>
                 </a>
                 <a href="#skill" class="nf-link" data-nfsec="skill">
-                    <span class="nf-lbl">Skills</span>
+                    <span class="nf-lbl">Compétences</span>
                     <span class="nf-line"></span>
                 </a>
             </div>
             <!-- Row 4: Portfolio · Contact -->
             <div class="nf-row">
                 <a href="#portfolio" class="nf-link" data-nfsec="portfolio">
-                    <span class="nf-lbl">Portfolio</span>
+                    <span class="nf-lbl">Projets</span>
                     <span class="nf-line"></span>
                 </a>
                 <a href="#contact" class="nf-link" data-nfsec="contact">
@@ -1556,7 +1646,7 @@
                 </a>
             </div>
         </nav>
-        <a href="#contact" class="nf-cta" id="nfCta">Hire Me →</a>
+        <a href="#contact" class="nf-cta" id="nfCta">Me recruter →</a>
     </div>
 
     <!-- JavaScript Libraries -->
